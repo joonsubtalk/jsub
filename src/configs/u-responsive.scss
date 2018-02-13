@@ -1,0 +1,15 @@
+.container {
+    width: 100%;
+
+    @media #{$bsDesktop} {
+
+    }
+    
+    @media #{$bsTablet} {
+        
+    }
+    
+    @media #{$mobile} {
+
+    }
+}

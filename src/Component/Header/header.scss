@@ -1,0 +1,5 @@
+@import 'configs/shared.scss';
+
+.o-header {
+    background-image: linear-gradient( to right, $HEADER_BACKGROUND_START_COLOR, $HEADER_BACKGROUND_END_COLOR);
+}

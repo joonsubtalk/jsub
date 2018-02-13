@@ -1,5 +1,20 @@
 @import 'configs/shared.scss';
 
 .o-header {
+    /* can be treated like a fallback */
+    background-color: $HEADER_BACKGROUND_START_COLOR;
+
+    /* will be "on top", if browser supports it */
     background-image: linear-gradient( to right, $HEADER_BACKGROUND_START_COLOR, $HEADER_BACKGROUND_END_COLOR);
+
+    /* these will reset other properties, like background-position, but it does know what you mean */
+    background: red;
+    background-image: linear-gradient( to right, $HEADER_BACKGROUND_START_COLOR, $HEADER_BACKGROUND_END_COLOR);
+
+    color: $COLOR_WHITE;
+    font-size: 1rem;
+
+    &__brand {
+        font-size: 2em;
+    }
 }

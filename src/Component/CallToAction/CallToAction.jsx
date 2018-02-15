@@ -9,10 +9,10 @@ const CallToAction = ( props ) => {
 
     return (
         <section className="o-callToAction">
-            <div className="container">
-                <h3>{ title }</h3>
-                <p>{ subText }</p>
-                <button>{ ctaText }</button>
+            <div className="container o-callToAction__grid">
+                <h3 className="o-callToAction__title">{ title }</h3>
+                <p className="o-callToAction__subtext">{ subText }</p>
+                <button className="o-callToAction__cta">{ ctaText }</button>
             </div>
         </section>
     )

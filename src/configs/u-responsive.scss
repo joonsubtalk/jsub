@@ -2,16 +2,13 @@
 
 .container {
     width: 100%;
+    margin: 0 auto;
 
     @media #{$bsDesktop} {
-
+        width: 700px;
     }
-    
+
     @media #{$bsTablet} {
-        
-    }
-    
-    @media #{$mobile} {
-
+        width: 600px;
     }
 }

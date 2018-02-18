@@ -1,0 +1,37 @@
+.o-channelBlur {
+    width: 100%;
+    height: 20em;
+
+    &__container {
+        height: 100%;
+        position: relative;
+        border: 1px solid red;
+        overflow: hidden;
+    }
+
+    &__content {
+        font-size: 10em;
+        position: absolute;
+        mix-blend-mode: darken;
+        transition: all ease 200ms;
+        top: 0;
+        left: 0;
+        user-select: none;
+        filter: blur(4px);
+    }
+    &__y {
+        color: transparent;
+    }
+    &__m {
+        color: transparent;
+    }
+    &__c {
+        color: transparent;
+    }
+    .pointer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+}

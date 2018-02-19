@@ -15,7 +15,7 @@ class App extends Component {
 					subText="lorem"
 					ctaText="Call Now!"
 				/>
-				<ChannelBlur />
+				<ChannelBlur text={'A'}/>
 				<Footer/>
 			</div>
 		);

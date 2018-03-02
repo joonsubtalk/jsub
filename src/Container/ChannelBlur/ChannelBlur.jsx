@@ -126,7 +126,7 @@ class ChannelBlur extends Component {
                 <div className="o-channelBlur__container">
                     <div className="pointer">x</div>
                     <div style={{left: yXloc, top: yYloc, filter : `blur(${blur})`, textShadow: `0 0 ${blur} rgba(255,255,0,1)` }} className="o-channelBlur__y o-channelBlur__content">Awesome</div>
-                    <div style={{left: this.state.compX, top: this.state.compY, filter : `blur(${blur})`, textShadow: `0 0 ${blur} rgba(255,0,255,1)` }} className="o-channelBlur__m o-channelBlur__content">Awesome</div>
+                    <div style={{left: compX, top: compY, filter : `blur(${blur})`, textShadow: `0 0 ${blur} rgba(255,0,255,1)` }} className="o-channelBlur__m o-channelBlur__content">Awesome</div>
                     <div style={{left: cXloc, top: cYloc, filter : `blur(${blur})`, textShadow: `0 0 ${blur} rgba(0,255,255,1)`}} className="o-channelBlur__c o-channelBlur__content">Awesome</div>
                 </div>
             </div>

@@ -4,11 +4,15 @@
     width: 100%;
     margin: 0 auto;
 
-    @media #{$bsDesktop} {
-        width: 700px;
+    @media #{$desktop} {
+        width: 1200px;
     }
 
-    @media #{$bsTablet} {
-        width: 600px;
+    @media #{$laptop} {
+        width: 970px;
+    }
+
+    @media #{$tablet} {
+        width: 700px;
     }
 }

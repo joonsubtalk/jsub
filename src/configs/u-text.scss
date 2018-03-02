@@ -1,0 +1,13 @@
+@import './media.scss';
+
+.u-bold {
+    font-weight: bold !important;
+}
+.u-fade {
+    font-weight: lighter !important;
+}
+
+// Usually to separate sections
+.u-baseSpacing {
+    padding: 4em 1em;
+}

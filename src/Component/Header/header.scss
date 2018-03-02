@@ -1,6 +1,8 @@
 @import 'configs/shared.scss';
 
 .o-header {
+    $HERO_HEIGHT: 500px;
+
     /* can be treated like a fallback */
     background-color: $HEADER_BACKGROUND_START_COLOR;
 
@@ -14,7 +16,16 @@
     color: $COLOR_WHITE;
     font-size: 1rem;
 
+    height: $HERO_HEIGHT;
+
+    &__container {
+        height: 100%;
+    }
+
     &__brand {
-        font-size: 2em;
+        font-size: 4em;
+    }
+    &__subtext {
+        font-size: 1em;
     }
 }

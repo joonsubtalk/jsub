@@ -8,22 +8,18 @@ const CallToAction = ( props ) => {
     const { title, subText, ctaText } = props;
 
     return (
-        <section className="o-callToAction">
-            <div className="container o-callToAction__grid">
-                <h3 className="o-callToAction__title">{ title }</h3>
-                <p className="o-callToAction__subtext">{ subText }</p>
-                <button className="o-callToAction__cta">{ ctaText }</button>
+        <section className="o-callToAction u-baseSpacing">
+            <div className="container">
+                <div className="o-callToAction__container">
+                    <h3 className="o-callToAction__title">{ title }</h3>
+                    <p className="o-callToAction__subtext">{ subText }</p>
+                    <button className="o-callToAction__cta">{ ctaText }</button>
+                </div>
             </div>
         </section>
     )
 
 }
-
-CallToAction.defaultProps = {
-    title : '',
-    subText : '',
-    ctaText : ''
-};
 
 CallToAction.propTypes = {
     title : string.isRequired,

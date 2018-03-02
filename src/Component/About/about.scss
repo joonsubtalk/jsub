@@ -1,0 +1,37 @@
+@import 'configs/shared.scss';
+
+.c-about {
+    &__container {
+        display: flex;
+        justify-content: center;
+        width: 75%;
+        margin: 0 auto;
+        @media #{$mobile} {
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &__featuredImageContainer {
+        margin-right: 3em;
+
+        @media #{$mobile} {
+            margin-right: 0em;
+            margin-bottom: 3em;
+        }
+    }
+    &__featuredImage {
+        $IMAGE_SIZE: 13em;
+
+        width: $IMAGE_SIZE;
+        height: $IMAGE_SIZE;
+        border-radius: 50%;
+    }
+    &__featuredDescriptionContainer {
+        display: flex;
+        flex-direction: column;
+    }
+    &__featuredDescription {
+
+    }
+}

@@ -1,4 +1,7 @@
+@import 'configs/shared.scss';
+
 // Footer
 .o-footer {
-    color: red;
+    color: rgb(124, 80, 80);
+    background-color: $FOOTER_BACKGROUND;
 }

@@ -4,9 +4,9 @@ import './footer.css';
 const Footer = () => {
 
     return (
-        <footer className="o-footer">
+        <footer className="o-footer u-baseSpacing">
             <div className="container">
-                Footer IS AWESOME!
+                <div className="o-footer__legal">2018 &copy; Joonsub.com | </div>
             </div>
         </footer>
     )

@@ -4,37 +4,42 @@
     background: $CTA_BACKGROUND;
     color: #fff;
 
-    &__grid {
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 100%;
-
-        @media #{$desktop} {
-            grid-template-columns: 1fr 1fr 2fr 1fr 2fr;
-            grid-template-rows: 1fr 2fr 1fr;
-        }
-    
-        @media #{$laptop} {
-            grid-template-columns: 100%;
-            grid-template-rows: 100%;
-        }
+    &__container {
+        display: flex;
+        justify-content: center;
     }
-
+    &__featuredImageContainer {
+        
+    }
+    &__logo{
+        border: 3px solid #fff;
+        font-size: 4em;
+        padding: 0.3em;
+        margin-right: 1em;
+    }
+    &__featuredDescriptionContainer {
+        display: flex;
+        flex-direction: column;
+    }
     &__title {
-        grid-column: 3 / 1;
+        margin: 0;
     }
 
     &__subtext {
         grid-row: 1;
     }
     &__cta {
-        background-color: #fff;
+        background-color: #a3caef;
         border: none;
-        color: #000;
+        color: #406c96;
         padding: 1em 2em;
         text-align: center;
         text-decoration: none;
         display: inline-block;
         font-size: 1em;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }

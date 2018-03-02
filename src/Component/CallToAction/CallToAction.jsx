@@ -11,9 +11,14 @@ const CallToAction = ( props ) => {
         <section className="o-callToAction u-baseSpacing">
             <div className="container">
                 <div className="o-callToAction__container">
-                    <h3 className="o-callToAction__title">{ title }</h3>
-                    <p className="o-callToAction__subtext">{ subText }</p>
-                    <button className="o-callToAction__cta">{ ctaText }</button>
+                    <div className="o-callToAction__featuredImageContainer">
+                        <div className="o-callToAction__logo">JS</div>
+                    </div>
+                    <div className="o-callToAction__featuredDescriptionContainer">
+                        <h3 className="o-callToAction__title">{ title }</h3>
+                        <p className="o-callToAction__subtext">{ subText }</p>
+                        <button className="o-callToAction__cta">{ ctaText }</button>
+                    </div>
                 </div>
             </div>
         </section>

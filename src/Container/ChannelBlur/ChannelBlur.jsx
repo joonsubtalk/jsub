@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { getHeight, getWidth } from '../../helpers/Responsive';
 import './channelBlur.css';
+
+const { string } = PropTypes;
 
 class ChannelBlur extends Component {
 
@@ -26,7 +29,9 @@ class ChannelBlur extends Component {
     }
 
     handleMouseMove = (e) => {
+
         if (!this.state.wait){
+
             this.setState({wait : true});
 
             const { clientX, clientY } = e;
@@ -44,18 +49,16 @@ class ChannelBlur extends Component {
             setTimeout(() => {
                 this.setState({wait : false});
             }, 50);
+
         }
+
     }
 
-    calculateDistance = (coord1,coord2) => {
+    calculateDistance = (coord1, coord2) => {
         const {x1,y1} = coord1;
         const {x2,y2} = coord2
 
         return Math.sqrt(Math.pow(x2-x1,2) + Math.pow(y2-y1,2));
-    }
-
-    print = (e) => {
-        console.log(this.state.distance);
     }
 
     componentDidMount() {
@@ -85,11 +88,14 @@ class ChannelBlur extends Component {
         // place the main where it should be...
         const { height : compHeight,
             width : compWidth } = document.querySelector('.o-channelBlur__m').getBoundingClientRect();
-
-        this.setState({compX: (getWidth()/2)-(compWidth/2), compY: (height/2)-(compHeight/2), compHeight, compWidth});
+            
         const windowWidth = getWidth();
         const windowHeight = getHeight();
-        this.setState({ 
+        this.setState({
+            compX: (windowWidth/2)-(compWidth/2),
+            compY: (height/2)-(compHeight/2),
+            compHeight,
+            compWidth,
             width : getWidth(), //same as windows...
             height : height,
             windowWidth : windowWidth,
@@ -122,7 +128,7 @@ class ChannelBlur extends Component {
         const cYloc = `${compOffsetY + ( compY - compOffsetY ) * 2}px`;
         const blur = `${this.getBlurPixel(distance)}px`;
         return (
-            <div onClick={this.print} onMouseMove={this.handleMouseMove} className="o-channelBlur">
+            <div onMouseMove={this.handleMouseMove} className="o-channelBlur">
                 <div className="o-channelBlur__container">
                     <div className="pointer">x</div>
                     <div style={{left: yXloc, top: yYloc, filter : `blur(${blur})`, textShadow: `0 0 ${blur} rgba(255,255,0,1)` }} className="o-channelBlur__y o-channelBlur__content">Awesome</div>
@@ -134,5 +140,9 @@ class ChannelBlur extends Component {
     }
 
 }
+
+ChannelBlur.propTypes = {
+    text : string.isRequired
+};
 
 export default ChannelBlur;

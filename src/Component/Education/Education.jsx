@@ -7,8 +7,17 @@ class Education extends Component {
             <section className="c-education u-baseSpacing">
                 <div className="container">
                     <div className="c-education__container">
-                        CSUN 2009 Computer Science B.S.
-                        UCLA 2014 Computer Science M.S. (Emphasis on Mobile Technologies)
+                        <div className="c-education__school">
+                            <div className="c-education__name">CSUN</div>
+                            <div className="c-education__year">2009</div>
+                            <div className="c-education__profession">Computer Science B.S.</div>
+                        </div>
+                        <div className="c-education__school">
+                            <div className="c-education__name">UCLA</div>
+                            <div className="c-education__year">2014</div>
+                            <div className="c-education__profession">Computer Science M.S.</div>
+                              (Emphasis on Mobile Technologies)
+                        </div>
                     </div>
                 </div>
             </section>

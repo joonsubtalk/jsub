@@ -3,6 +3,8 @@
 .o-header {
     $HERO_HEIGHT: 500px;
 
+    font-family: 'Roboto', sans-serif;
+
     /* can be treated like a fallback */
     background-color: $HEADER_BACKGROUND_START_COLOR;
 
@@ -17,15 +19,41 @@
     font-size: 1rem;
 
     height: $HERO_HEIGHT;
+    position: relative;
 
     &__container {
-        height: 100%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 6em;
     }
-
     &__brand {
-        font-size: 4em;
+        font-size: 10em;
+        font-weight: bold;
+        text-align: center;
+        position: relative;
+        z-index: 100;
+    }
+    &__shadow {
+        font-size: 10em;
+        font-weight: bold;
+        text-align: center;
+        text-shadow: 20px 20px #000;
+        color: transparent;
+        text-shadow: 0 0 .3em rgba(0,0,0,0.6);
+        position: absolute;
+        bottom: -0.1em;
+        transform: translate(0.1em) rotateX(-43deg) rotateZ(6deg);
     }
     &__subtext {
-        font-size: 1em;
+        font-size: 2.2em;
+        text-align: center;
+    }
+    &__foreground {
+        background-image: linear-gradient(#943670, #bd3f6e);
+        height: 10em;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
     }
 }

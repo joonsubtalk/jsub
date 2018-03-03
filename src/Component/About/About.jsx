@@ -13,22 +13,28 @@ class About extends Component {
 
 	render() {
 
-		const { description, pic } = this.props;
+		const { description, pic, blurb } = this.props;
 
 		return (
-			<section className="c-about u-baseSpacing">
-				<div className="container">
-					<div className="c-about__container">
-						<div className="c-about__featuredImageContainer">
-							<img className="c-about__featuredImage" src={pic} alt="" />
+			<section className="c-about">
+				<div className="c-about__background">
+					<div className="c-about__background1"></div>
+					<div className="c-about__background2"></div>
+					<div className="c-about__background3"></div>
+				</div>
+				<div className="c-about__container">
+					<div className="c-about__header">About Me</div>
+					<button className="c-about__readmore" />
+					<div className="c-about__hr"></div>
+					<div className="c-about__content">
+						<div className="c-about__card">
+							<div className="c-about__text">
+								<div className="c-about__title">Joon</div>
+								<div className="c-about__teaser">{blurb}</div>
+							</div>
 						</div>
-						<div className="c-about__featuredDescriptionContainer">
-							<div className="c-about__featuredUser">
-							About <span className="u-bold">Joon Chung</span>
-							</div>
-							<div className="c-about__featuredDescription">
-							{this.renderArrayToParagraph(description)}
-							</div>
+						<div className="c-about__featuredImage">
+							<img className="c-about__image" src={pic} alt="" />
 						</div>
 					</div>
 				</div>

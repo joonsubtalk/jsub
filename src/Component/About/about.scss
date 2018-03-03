@@ -1,40 +1,134 @@
 @import 'configs/shared.scss';
 
 .c-about {
+    $ABOUT_HEIGHT: 60em;
+    $SUBHEIGHT: $ABOUT_HEIGHT - 18em;
+
+    font-family: 'Roboto', sans-serif;
+    background-color: $ABOUT_BACKGROUND;
+    height: $ABOUT_HEIGHT;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__image {
+        width: 30em;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        right: 0em;
+    }
+
+    &__featuredImage {
+        width: 22em;
+        position: relative;
+        overflow: hidden;
+    }
+
     &__container {
+        position: absolute;
+        z-index: 1000;
+        height: $SUBHEIGHT;
+        width: 100%;
+        display: flex;
+
+        @media #{$desktop} {
+            width: 1200px;
+        }
+    
+        @media #{$laptop} {
+            width: 970px;
+        }
+    
+        @media #{$tablet} {
+            width: 700px;
+        }
+    }
+
+    &__hr {
+        width: 50px;
+        height: 1px;
+        position: absolute;
+        top: 70%;
+        left: 4em;
+        background-color: #5d5d5d;// TODO::
+    }
+
+    &__header {
+        position: absolute;
+        top: 12%;
+        left: 4em;
+    }
+
+    &__content {
+        padding: 6em 10em 6em 2em;
+        display: flex;
+    }
+
+    &__card {
+        padding: 3em 6em 3em 2em;
+        background-color: #fff;
         display: flex;
         justify-content: center;
-        width: 52em;
-        margin: 0 auto;
-        @media #{$mobile} {
-            width: 100%;
-            flex-direction: column;
-            align-items: center;
-        }
-        @media #{$tablet} {
-            width: 44em;
-        }
+        align-items: center;
     }
-    &__featuredImageContainer {
-        margin-right: 3em;
 
-        @media #{$mobile} {
-            margin-right: 0em;
-            margin-bottom: 3em;
-        }
+    &__text {
+
     }
-    &__featuredImage {
-        $IMAGE_SIZE: 13em;
 
-        width: $IMAGE_SIZE;
-        height: $IMAGE_SIZE;
+    &__readmore {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: 80%;
+        left: 4em;
         border-radius: 50%;
+        border: none;
+        background-color: $ABOUT_BACKGROUND3;
     }
-    &__featuredDescriptionContainer {
-        display: flex;
-        flex-direction: column;
-    }
-    &__featuredDescription {
 
+    &__teaser {
+        width: 28em;
+        color: #5d5d5d;// TODO::
+        line-height: 1.5;
+    }
+
+    &__title {
+        font-size: 5em;
+        margin-bottom: .2em;
+    }
+
+    //
+    // Background
+    &__background {
+        display: grid;
+        grid-template-columns: 5fr 2fr 1fr;
+        height: $SUBHEIGHT;
+        position: absolute;
+        z-index: 500;
+        background-color: $ABOUT_BACKGROUND;
+        width: 100%;
+
+        @media #{$desktop} {
+            width: 1200px;
+        }
+    
+        @media #{$laptop} {
+            width: 970px;
+        }
+    
+        @media #{$tablet} {
+            width: 700px;
+        }
+    }
+    &__background1 {
+        background-color: $ABOUT_BACKGROUND1;
+    }
+    &__background2 {
+        background-color: $ABOUT_BACKGROUND2;
+    }
+    &__background3 {
+        background-color: $ABOUT_BACKGROUND3;
     }
 }

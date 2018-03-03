@@ -1,3 +1,15 @@
+@import 'configs/shared.scss';
+
 .c-portfolio {
-    
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 50px;
+
+        @media #{$notDesktop} {
+            grid-template-columns: 1fr;
+        }
+    }
+
 }

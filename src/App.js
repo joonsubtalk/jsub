@@ -14,13 +14,14 @@ import './App.css';
 class App extends Component {
 	render() {
 
-		const { aboutDescription } = info;
+		const { aboutBlurb, aboutDescription } = info;
 
 		return (
 			<div>
 				<Debugger />
 				<Header/>
 				<About description={aboutDescription}
+					blurb={aboutBlurb}
 					pic={profilepic} />
 				<Education />
 				<Portfolio />

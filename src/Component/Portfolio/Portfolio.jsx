@@ -24,13 +24,24 @@ class Portfolio extends Component {
         const { works } = info.portfolio ;
 
         return (
-        <div className="c-portfolio u-baseSpacing">
+        <section className="c-portfolio u-baseSpacing">
+            <div className="c-portfolio__background">
+                <div className="c-portfolio__typography">
+                    work
+                </div>
+                <div className="c-portfolio__line"></div>
+                <div className="c-portfolio__line"></div>
+                <div className="c-portfolio__line"></div>
+                <div className="c-portfolio__line"></div>
+                <div className="c-portfolio__line"></div>
+            </div>
             <div className="container">
                 <div className="c-portfolio__container">
                     { this.renderWorks(works) }
                 </div>
             </div>
-        </div>)
+            
+        </section>)
     }
 }
 

@@ -3,4 +3,77 @@
 .c-education {
     background-color: $EDUCATION_BACKGROUND;
     color: #fff;
+
+    height: 30em;
+    background: linear-gradient(to bottom right, $EDUCATION_BACKGROUND2 0%, $EDUCATION_BACKGROUND3 100%) 100% no-repeat;
+    overflow: hidden;
+
+    &__school {
+        display: flex;
+    }
+    &__name {
+        font-weight: bold;
+         
+    }
+
+    &__schools {
+        background-color: $EDUCATION_BACKGROUND;
+        padding: 2em;
+    }
+
+    &__techstack {
+        font-size: 3em;
+        font-weight: bold;
+        text-transform: uppercase;
+        position: relative;
+        margin-left: .5em;
+    }
+    &__techline {
+        height: 5px;
+        width: 1em;
+        background-color: #fff;
+        position: absolute;
+        top: 10px;
+        left: -55px;
+        animation-name: techstack-drop;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        opacity: 1;
+        border-radius: 2em;
+    }
+    
+    &__techline0 {
+        animation-delay: -.5s;
+    }
+    &__techline1 {
+        animation-delay: -1s;
+    }
+    &__techline2 {
+        animation-delay: -1.5s;
+    }
+    &__techline3 {
+        animation-delay: -2s;
+    }
+    &__techline4 {
+        animation-delay: -2.5s;
+    }
+    &__techline5 {
+        animation-delay: -3s;
+    }
+    &__techline6 {
+        animation-delay: -3.5s;
+    }
+    &__techline7 {
+        animation-delay: -4s;
+    }
+}
+
+
+@keyframes techstack-drop {
+    0%   {top:-10px; opacity:0;}
+    20%  {top:25px; opacity:1;}
+    50%  {top:38px; opacity:1;}
+    75%  {top:38px; opacity:.2;}
+    85%  {top:0px; opacity:0;}
+    100% {top:-20px; opacity:0;}
 }

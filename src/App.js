@@ -8,6 +8,7 @@ import CallToAction from './Component/CallToAction/CallToAction';
 import { info } from './configs/info.js';
 import Debugger from './Component/Debugger/Debugger';
 import profilepic from './images/prof.jpg';
+import Statistics from './Component/Statistics/Statistics';
 
 import './App.css';
 
@@ -26,9 +27,10 @@ class App extends Component {
 				<Education />
 				<Portfolio />
 				<CallToAction title="lorem ipsum"
-					subText="lorem"
+					subText="I'm always looking for interesting projects."
 					ctaText="Call Now!"
 				/>
+				<Statistics />
 				<Footer/>
 			</div>
 		);

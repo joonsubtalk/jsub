@@ -4,4 +4,8 @@
 .o-footer {
     color: #fff;
     background-color: $FOOTER_BACKGROUND;
+
+    &__icon {
+        width: 2em;
+    }
 }

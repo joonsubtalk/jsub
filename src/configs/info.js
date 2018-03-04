@@ -10,17 +10,20 @@ export const info = {
             { 
                 job : 'zazzle',
                 title : 'UI Engineer',
-                link : 'https://www.zazzle.com'
+                link : 'https://www.zazzle.com',
+                image : 'image/zazzle.jpg'
             },
             { 
                 job : 'mediatemple',
                 title : 'Frontend Developer',
-                link : 'https://www.mediatemple.net'
+                link : 'https://www.mediatemple.net',
+                image : 'image/mediatemple.jpg'
             },
             { 
                 job : 'coram design center',
                 title : 'Freelance - web developer',
-                link : 'http://www.coramdesigncenter.com'
+                link : 'http://www.coramdesigncenter.com',
+                image : 'image/design.jpg'
             },
             { 
                 job : 'coram realty',
@@ -31,12 +34,14 @@ export const info = {
             { 
                 job : 'COPAKB',
                 title : 'web developer',
-                link : 'http://www.heartproteome.org'
+                link : 'http://www.heartproteome.org',
+                image : 'image/copakb.jpg'
             },
             { 
                 job : 'MEATOES',
                 title : 'game developer',
-                link : 'https://www.meatoes.com'
+                link : 'https://www.meatoes.com',
+                image : 'image/minion.jpg'
             },
         ]
     }

@@ -1,59 +1,86 @@
 @import 'configs/shared.scss';
 
 .o-header {
-    $HERO_HEIGHT: 500px;
+    background-color: $PRIMARY;
+    height: 75vh;
+    min-height: 35em;
+    font-size: 1em;
+    color: white;
+    overflow: hidden;
 
-    font-family: 'Roboto', sans-serif;
-
-    /* can be treated like a fallback */
-    background-color: $HEADER_BACKGROUND_START_COLOR;
-
-    /* will be "on top", if browser supports it */
-    background-image: linear-gradient( to right, $HEADER_BACKGROUND_START_COLOR, $HEADER_BACKGROUND_END_COLOR);
-
-    /* these will reset other properties, like background-position, but it does know what you mean */
-    background: red;
-    background-image: linear-gradient( to right, $HEADER_BACKGROUND_START_COLOR, $HEADER_BACKGROUND_END_COLOR);
-
-    color: $COLOR_WHITE;
-    font-size: 1rem;
-
-    height: $HERO_HEIGHT;
-    position: relative;
+    &__mark {
+        font-size: 6.5em;
+        font-family: 'Roboto Condensed', sans-serif;
+        width: 5em;
+        line-height: 0.8;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+    }
 
     &__container {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 6em;
-    }
-    &__brand {
-        font-size: 10em;
-        font-weight: bold;
-        text-align: center;
         position: relative;
-        z-index: 100;
-    }
-    &__shadow {
-        font-size: 10em;
-        font-weight: bold;
-        text-align: center;
-        text-shadow: 20px 20px #000;
-        color: transparent;
-        text-shadow: 0 0 .3em rgba(0,0,0,0.6);
-        position: absolute;
-        bottom: -0.1em;
-        transform: translate(0.1em) rotateX(-43deg) rotateZ(6deg);
-    }
-    &__subtext {
-        font-size: 2.2em;
-        text-align: center;
-    }
-    &__foreground {
-        background-image: linear-gradient(#943670, #bd3f6e);
-        height: 10em;
         width: 100%;
+        height: 100%;
+        margin: 0 auto;
+
+        @media (min-width: 1920px) {
+            width: 1400px;
+        }
+
+        @media (min-width: 1440px) and (max-width: 1919px) {
+            width: 1300px;
+        }
+    
+        @media (min-width: 1024px) and (max-width: 1439px) {
+            width: 1000px;
+        }
+    
+        @media #{$laptop} {
+            width: 970px;
+        }
+    
+        @media #{$tablet} {
+            width: 700px;
+        }
+    }
+
+    &__aligner {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    &__content {
+
+    }
+
+    &__subtext {
+        margin-bottom: 2rem;
+    }
+
+    &__bgimage {
         position: absolute;
-        bottom: 0;
+        width: 30em;
+        right: 5%;
+        top: -10em;
+    }
+
+    &__cta {
+        background-color: transparent;
+        border: 1px solid #fff;
+        color: #fff;
+        padding: 1em 2.5em;
+        text-transform: uppercase;
+        transition: all ease .2s;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $PRIMARY1;
+        }
+    }
+
+    &__brand {
+        position: absolute;
     }
 }

@@ -1,0 +1,23 @@
+.c-statistics {
+    background-image: linear-gradient( #fcf3f4, #ced3e7);
+    height: 40em;
+    font-family: 'Roboto Condensed', sans-serif;
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 20px;
+    }
+
+    &__item {
+        height: 10em;
+        padding: 1em;
+        background-color: #fff;
+        border-right: 2em solid #0077d6;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    }
+
+    &__stat {
+        font-size: 3em;
+    }
+}

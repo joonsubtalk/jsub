@@ -19,13 +19,9 @@ class Footer extends Component{
 
                     <div className="o-footer__social">
                         <ul className="o-footer__socials">
-                            <li className="o-footer__items">
-                                <a href="">
-                                    <img className="o-footer__icon" src={li} alt='' />
-                                </a>
-                            </li>
-                            <li className="o-footer__items"><img className="o-footer__icon" src={gh} alt='' /></li>
-                            <li className="o-footer__items"><img className="o-footer__icon" src={em} alt='' /></li>
+                            <SocialIcon link={''} icon={gh} alt='github' />
+                            <SocialIcon link={''} icon={li} alt='linkedin' />
+                            <SocialIcon link={''} icon={em} alt='mail' />
                         </ul>
                     </div>
                 </div>
@@ -33,6 +29,16 @@ class Footer extends Component{
         )
     }
 
+}
+
+const SocialIcon = ({link, icon, alt}) => {
+
+    return (
+        <li className="o-footer__items">
+            <a href={link} className="o-footer__socialLink">
+                <img className="o-footer__icon" src={icon} alt={alt} />
+            </a>
+        </li>)
 }
 
 export default Footer;

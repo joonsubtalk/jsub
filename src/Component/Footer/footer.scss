@@ -8,4 +8,12 @@
     &__icon {
         width: 2em;
     }
+    &__items {
+        list-style: none;
+    }
+    &__socials {
+        display: flex;
+        padding-left: 0;
+        margin: 0;
+    }
 }

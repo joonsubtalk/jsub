@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Component/Header/Header';
 import About from './Component/About/About';
-import Education from './Component/Education/Education';
 import Portfolio from './Component/Portfolio/Portfolio';
 import Footer from './Component/Footer/Footer';
 import CallToAction from './Component/CallToAction/CallToAction';
@@ -24,7 +23,6 @@ class App extends Component {
 				<About description={aboutDescription}
 					blurb={aboutBlurb}
 					pic={profilepic} />
-				<Education />
 				<Portfolio />
 				<CallToAction title="lorem ipsum"
 					subText="I'm always looking for interesting projects."

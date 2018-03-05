@@ -10,17 +10,19 @@ class Work extends Component {
 
         return (
         <div className="c-work">
-            <div className="c-work__job">
-                {job}
-            </div>
-            <div className="c-work__title">
-                {title}
-            </div>
-            <div className="c-work__link">
-                { /*link*/}
-            </div>
             <div className="c-work__bg">
                 <img className="c-work__bgimage" src={imgSrc} />
+            </div>
+            <div className="c-work__container">
+                <div className="c-work__job">
+                    {job}
+                </div>
+                <div className="c-work__title">
+                    {title}
+                </div>
+                <div className="c-work__link">
+                    { /*link*/}
+                </div>
             </div>
         </div>)
     }

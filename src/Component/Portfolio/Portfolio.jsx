@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Work from './Work/Work';
+import Line from './Line/Line';
 import './portfolio.css';
 
 import { info } from '../../configs/info.js';
@@ -29,11 +30,7 @@ class Portfolio extends Component {
                 <div className="c-portfolio__typography">
                     work
                 </div>
-                <div className="c-portfolio__line"></div>
-                <div className="c-portfolio__line"></div>
-                <div className="c-portfolio__line"></div>
-                <div className="c-portfolio__line"></div>
-                <div className="c-portfolio__line"></div>
+                <Line />
             </div>
             <div className="container">
                 <div className="c-portfolio__container">

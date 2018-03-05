@@ -8,16 +8,16 @@ export const info = {
     portfolio : {
         works : [
             { 
-                job : 'zazzle',
-                title : 'UI Engineer',
-                link : 'https://www.zazzle.com',
-                image : 'image/zazzle.jpg'
-            },
-            { 
                 job : 'mediatemple',
                 title : 'Frontend Developer',
                 link : 'https://www.mediatemple.net',
                 image : 'image/mediatemple.jpg'
+            },
+            { 
+                job : 'zazzle',
+                title : 'UI Engineer',
+                link : 'https://www.zazzle.com',
+                image : 'image/zazzle.jpg'
             },
             { 
                 job : 'coram design center',

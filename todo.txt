@@ -41,15 +41,10 @@ Studying/Reading People (Creepy)
 
 Tech Stack
 HTML, CSS, JS
-React, BEM, ActionScript
+React, BEM
 
-Portfolio
-Zazzle
-MediaTemple
-Coram Design
 
 CTA
-Github
-Linkedin
+
 
 Footer

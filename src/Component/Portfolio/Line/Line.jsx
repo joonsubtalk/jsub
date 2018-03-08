@@ -24,8 +24,6 @@ class Line extends Component {
             return val;
         }
         else {
-            
-            console.log('nay');
             if (val > this.state.previousTop){
                 this.setState({previousTop : this.state.previousTop + 25});
                 return this.state.previousTop + 25;
@@ -43,7 +41,6 @@ class Line extends Component {
 
             const rando = Math.floor(Math.random() * 90);
             const top = this.normalizedTopSpread(Math.floor(Math.random() * (10 * this.state.counter))-75);
-
 
             const animateStyle = Object.assign({}, style, 
                 {top: `${top}px`, 

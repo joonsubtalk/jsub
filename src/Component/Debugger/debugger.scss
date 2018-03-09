@@ -1,0 +1,20 @@
+@import 'configs/shared.scss';
+
+.o-debugger {
+
+    &__type:after {
+        content: 'mobile';
+
+        @media #{$desktop} {
+            content: 'desktop';
+        }
+    
+        @media #{$laptop} {
+            content: 'laptop';
+        }
+    
+        @media #{$tablet} {
+            content: 'tablet';
+        }
+    }
+}

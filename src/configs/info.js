@@ -1,8 +1,7 @@
 export const info = {
-    aboutBlurb : 'Joon Chung is a frontend developer who is passionate about user-centric design and clean code.',
+    aboutBlurb : 'Frontend developer who is passionate about developing user-centric web apps in the tech industry.',
     aboutDescription : [
-        'Joon Chung is a frontend developer who is passionate about user-centric design. He studied Computer Science at California State University Northridge, and proceeded to graduate studies at University of California Los Angeles to further his knowledge in mobile technologies.',
-        'In 2007, his mobile game \'Sketch\' was featured by Forbes.com as a part of the "ten cool games" list, and was also a runner-up regional winner in the Adobe Mobile Contest.',
+        'Studied Computer Science at California State University Northridge, and proceeded to graduate studies at University of California Los Angeles with an emphasis in mobile technologies.',
         'After a few years living in the Bay and beautifying Zazzle.com as a UI developer, he\'s back in Los Angeles working at MediaTemple as a frontend developer.'
     ],
     portfolio : {

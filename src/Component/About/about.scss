@@ -45,7 +45,7 @@
         }
     
         @media #{$tablet} {
-            width: 700px;
+            width: 15em;
         }
     }
 
@@ -118,6 +118,10 @@
         overflow: hidden;
         transition: all ease .5s;
         font-size: 1.1em;
+
+        @media #{$tablet} {
+            width: 24.3em;
+        }
     }
 
     &__readmore {
@@ -147,6 +151,16 @@
         line-height: 1.5;
         font-size: 1.1em;
         transition: all ease .5s;
+
+        @media #{$tablet} {
+            width: 20em;
+        }
+    }
+
+    &__text {
+        @media #{$tablet} {
+            padding: 1em;
+        }
     }
 
     &__title {

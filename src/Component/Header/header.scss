@@ -104,7 +104,8 @@
 
         &:hover {
             cursor: pointer;
-            background-color: $PRIMARY1;
+            background-color: $COLOR_WHITE;
+            color: $PRIMARY;
         }
 
         @media #{$mobile} {

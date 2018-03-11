@@ -125,21 +125,21 @@
     }
 
     &__readmore {
-        color: $PRIMARY;
         position: absolute;
         width: 10em;
         height: 40px;
         top: 80%;
         left: 4em;
         border-radius: 25px;
-        background-color: $COLOR_WHITE;
+        background-color: $PRIMARY;
+        color: $COLOR_WHITE;
         border: 1px solid $PRIMARY;
         outline: none;
 
         &:hover {
-            background-color: $PRIMARY;
+            background-color: $COLOR_WHITE;
             cursor: pointer;
-            color: $COLOR_WHITE;
+            color: $PRIMARY;
         }
     }
 

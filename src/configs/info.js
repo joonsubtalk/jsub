@@ -10,7 +10,7 @@ export const info = {
                 job : 'mediatemple',
                 title : 'Frontend Developer',
                 link : 'https://www.mediatemple.net',
-                image : 'image/mediatemple.jpg'
+                image : 'image/mediatempleBig.jpg'
             },
             { 
                 job : 'zazzle',

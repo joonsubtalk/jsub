@@ -42,11 +42,21 @@
         font-family: 'Roboto', sans-serif;
     }
     &__text {
+        width: 20em;
         font-size: 1.15em;
     }
     &__container {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 2em;
+    }
+    &__social {
+        display: flex;
+        flex-direction: column;
+    }
+    &__connect {
+    }
+    &__write {
         margin-bottom: 2em;
     }
 }

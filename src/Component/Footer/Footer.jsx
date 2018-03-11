@@ -22,12 +22,18 @@ class Footer extends Component{
                             <button onClick={clickHandler}>Click Me</button>
                         </div>
                         <div className="o-footer__social">
-                            <div className="o-footer__socialHeader">Let's Connect!</div>
-                            <ul className="o-footer__socials">
-                                <SocialIcon link={github} type='github' />
-                                <SocialIcon link={linkedin} type='linkedin' />
-                                <SocialIcon link={email} type='email' />
-                            </ul>
+                            <div className="o-footer__write">
+                                <div className="o-footer__cta">I Journal.</div>
+                                <div className="o-footer__text">Let's make something together! This website was made.</div>
+                            </div>
+                            <div className="o-footer__connect">
+                                <div className="o-footer__socialHeader">Let's Connect!</div>
+                                <ul className="o-footer__socials">
+                                    <SocialIcon link={github} type='github' />
+                                    <SocialIcon link={linkedin} type='linkedin' />
+                                    <SocialIcon link={email} type='email' />
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

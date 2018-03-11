@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './header.css';
 
 import scope from '../../images/scope.jpg';
 

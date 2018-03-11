@@ -1,0 +1,9 @@
+<ifModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule (.*) index.html [QSA,L]
+    RewriteCond %{HTTP_HOST} ^joonsub\.com [NC]
+    RewriteCond %{SERVER_PORT} 80 
+    RewriteRule ^(.*)$ https://www.joonsub.com/$1 [R=301,L]
+</ifModule>

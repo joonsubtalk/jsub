@@ -43,5 +43,15 @@ export const info = {
                 image : 'image/minion.jpg'
             },
         ]
+    },
+    callToAction : {
+        title : 'Impressed?',
+        subText : 'I also teach 1:1 lessons on webdevelopment.',
+        ctaText : 'Schedule'
+    },
+    footerSocial : {
+        github : 'https://github.com/joonsubtalk',
+        linkedin : 'https://www.linkedin.com/in/joonsub/',
+        email : 'mailto:joonsubtalk@gmail.com?'
     }
 }

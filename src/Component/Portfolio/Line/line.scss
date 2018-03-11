@@ -2,14 +2,18 @@
 
 .o-line {
     //transform: rotate(226deg);
+    position:absolute;
+    left: -90em;
+    top: -8em;
 
     &__line {
         position: absolute;
         z-index: -1;
-        left: -80%;
+        left: 0;
         border-radius: 5em;
         height: 2.75em;
-        width: 75vw;background-image: linear-gradient( to right, $COLOR_DARKBLUE, $PRIMARY);
+        width: 75vw; 
+        background-image: linear-gradient( to right, $COLOR_DARKBLUE, $PRIMARY);
         transition: all ease .2s;
         transform: translate(0%);
     }

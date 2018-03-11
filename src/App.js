@@ -9,9 +9,17 @@ import Debugger from './Component/Debugger/Debugger';
 import profilepic from './images/prof.jpg';
 import Statistics from './Component/Statistics/Statistics';
 
-import './App.css';
-
 class App extends Component {
+
+	state = {
+		openStatistics : false
+	}
+
+	secretClickHandler = (evt) => {
+		evt.preventDefault();
+		this.setState({ openStatistics : true });
+	}
+
 	render() {
 
 		const { aboutBlurb, aboutDescription } = info;
@@ -24,12 +32,9 @@ class App extends Component {
 					blurb={aboutBlurb}
 					pic={profilepic} />
 				<Portfolio />
-				<CallToAction title="lorem ipsum"
-					subText="I'm always looking for interesting projects."
-					ctaText="Call Now!"
-				/>
-				<Statistics />
-				<Footer/>
+				<CallToAction />
+				<Statistics shouldOpen={this.state.openStatistics} />
+				<Footer clickHandler={this.secretClickHandler}/>
 			</div>
 		);
 	}

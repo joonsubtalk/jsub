@@ -4,3 +4,15 @@
 body {
     font-family: 'Muli', sans-serif;
 }
+
+/* Components */
+@import './Component/About/about.scss';
+@import './Component/CallToAction/callToAction.scss';
+@import './Component/Footer/footer.scss';
+@import './Component/Header/header.scss';
+@import './Component/Portfolio/Line/line.scss';
+@import './Component/Portfolio/portfolio.scss';
+@import './Component/Portfolio/Work/work.scss';
+@import './Component/Statistics/statistics.scss';
+
+@import './Component/Debugger/debugger.scss';

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Work from './Work/Work';
 import Line from './Line/Line';
-import './portfolio.css';
 
 import { info } from '../../configs/info.js';
 

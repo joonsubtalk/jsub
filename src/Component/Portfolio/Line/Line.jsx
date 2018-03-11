@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './line.css';
 
 const style = {
     backgroundColor: '#e94155',
@@ -13,7 +12,8 @@ class Line extends Component {
     state = {
         streak : [],
         counter : 0,
-        previousTop : -1
+        previousTop : -1,
+        spreadCount : 40
     }
 
     normalizedTopSpread = (val) => {
@@ -39,8 +39,9 @@ class Line extends Component {
         
         var i = setInterval(() => {
 
-            const rando = Math.floor(Math.random() * 90);
-            const top = this.normalizedTopSpread(Math.floor(Math.random() * (10 * this.state.counter))-75);
+            const rando = Math.floor(Math.random() * (80)) + 10;
+            //const top = this.normalizedTopSpread(Math.floor(Math.random() * (10 * this.state.counter))-75);
+            const top = (7 * this.state.counter);
 
             const animateStyle = Object.assign({}, style, 
                 {top: `${top}px`, 
@@ -56,7 +57,7 @@ class Line extends Component {
 
             console.log(this.state.streak);
 
-            if(this.state.counter === 40) {
+            if(this.state.counter === this.state.spreadCount) {
                 clearInterval(i);
             }
         }, 50);
@@ -65,7 +66,7 @@ class Line extends Component {
     componentDidMount() {
         this.addLines();
 
-        const initStreak = [...Array(40)].map((val, idx) => {
+        const initStreak = [...Array(this.state.spreadCount)].map((val, idx) => {
             return style
         });
 

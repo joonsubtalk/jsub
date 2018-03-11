@@ -1,12 +1,15 @@
 .c-statistics {
     background-image: linear-gradient( #fcf3f4, #ced3e7);
-    height: 40em;
+    height: 0em;
     font-family: 'Roboto Condensed', sans-serif;
+    overflow: hidden;
+    transition: all ease 1s;
 
     &__container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-gap: 20px;
+        padding: 4em 1em;
     }
 
     &__item {
@@ -19,5 +22,9 @@
 
     &__stat {
         font-size: 3em;
+    }
+
+    &--isActive {
+        height: 46em;
     }
 }

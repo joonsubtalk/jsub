@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './callToAction.css';
-
-const { string } = PropTypes;
+import { info } from '../../configs/info.js';
 
 const CallToAction = ( props ) => {
-    const { title, subText, ctaText } = props;
+    const { title, subText, ctaText } = info.callToAction;
 
     return (
         <section className="o-callToAction u-baseSpacing">
@@ -25,11 +23,5 @@ const CallToAction = ( props ) => {
     )
 
 }
-
-CallToAction.propTypes = {
-    title : string.isRequired,
-    subText : string.isRequired,
-    ctaText : string.isRequired
-};
 
 export default CallToAction;

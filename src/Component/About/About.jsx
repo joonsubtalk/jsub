@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import './about.css';
-
 class About extends Component {
 
 	state = {

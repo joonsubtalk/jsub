@@ -90,7 +90,7 @@
         position: absolute;
         width: 30em;
         right: 5%;
-        top: 0;
+        top: -1em;
     }
 
     &__cta {
@@ -101,6 +101,7 @@
         text-transform: uppercase;
         transition: all ease .2s;
         border-radius: 25px;
+        outline: none;
 
         &:hover {
             cursor: pointer;

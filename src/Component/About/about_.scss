@@ -1,0 +1,238 @@
+@import 'configs/shared.scss';
+
+.c-about {
+    $ABOUT_HEIGHT: 60em;
+    $SUBHEIGHT: $ABOUT_HEIGHT - 18em;
+
+    background-color: $ABOUT_BACKGROUND;
+    height: 42em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media #{$desktop} {
+        height: $ABOUT_HEIGHT;
+    }
+
+    @media #{$laptop} {
+        height: $ABOUT_HEIGHT - 10em;
+    }
+
+    @media #{$tablet} {
+        height: $ABOUT_HEIGHT;
+    }
+
+    &__image {
+        transition: all ease .5s;
+        width: 37em;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        right: 0em;
+    }
+
+    &__featuredImage {
+        width: 22em;
+        position: relative;
+        overflow: hidden;
+
+        @media #{$desktop} {
+            width: 22em;
+        }
+    
+        @media #{$laptop} {
+            width: 20em;
+        }
+    
+        @media #{$tablet} {
+            width: 15em;
+        }
+    }
+
+    &__container {
+        position: absolute;
+        z-index: 1000;
+        height: $SUBHEIGHT;
+        width: 100%;
+        display: flex;
+
+        @media #{$desktop} {
+            position: absolute;
+            height: $SUBHEIGHT;
+            display: flex;
+            width: 1200px;
+        }
+    
+        @media #{$laptop} {
+            width: 970px;
+        }
+    
+        @media #{$tablet} {
+            width: 700px;
+        }
+    }
+
+    &__header {
+        position: absolute;
+        top: 12%;
+        left: 4em;
+    }
+
+    &__content {
+        display: flex;
+
+        @media #{$desktop} {
+            padding: 6em 10em 6em 2em;
+        }
+
+        @media #{$laptop} {
+            padding: 6em 0em 6em 2em;
+        }
+    }
+
+    &__card {
+        padding: 3em 6em 3em 2em;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media #{$desktop} {
+            padding: 3em 6em 3em 2em;
+        }
+    
+        @media #{$laptop} {
+            padding: 3em 3em 3em 2em;
+        }
+    
+        @media #{$tablet} {
+            padding: 0;
+        }
+    }
+
+    &__description {
+        width: 27em;
+        height: 0;
+        color: #484848;// TODO ::
+        line-height: 1.5;
+        overflow: hidden;
+        transition: all ease .5s;
+        font-size: 1.1em;
+
+        @media #{$tablet} {
+            width: 24.3em;
+        }
+    }
+
+    &__readmore {
+        position: absolute;
+        width: 10em;
+        height: 40px;
+        top: 80%;
+        left: 4em;
+        border-radius: 25px;
+        background-color: $PRIMARY;
+        color: $COLOR_WHITE;
+        border: 1px solid $PRIMARY;
+        outline: none;
+
+        &:hover {
+            background-color: $COLOR_WHITE;
+            cursor: pointer;
+            color: $PRIMARY;
+        }
+    }
+
+    &__teaser {
+        width: 27em;
+        height: 3em;
+        overflow: hidden;
+        color: $COLOR_DARKGRAPHITE;// TODO::
+        line-height: 1.5;
+        font-size: 1.1em;
+        transition: all ease .5s;
+
+        @media #{$tablet} {
+            width: 20em;
+        }
+    }
+
+    &__text {
+        @media #{$tablet} {
+            padding: 1em;
+        }
+    }
+
+    &__title {
+        font-size: 5em;
+        margin-bottom: .2em;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    //
+    // Background
+    &__background {
+        display: grid;
+        grid-template-columns: 5fr 2fr 1fr;
+        height: $SUBHEIGHT;
+        position: absolute;
+        z-index: 500;
+        background-color: $ABOUT_BACKGROUND;
+        width: 100%;
+
+        @media #{$desktop} {
+            width: 1200px;
+        }
+    
+        @media #{$laptop} {
+            grid-template-columns: 5fr 0fr 2fr;
+            width: 970px;
+        }
+    
+        @media #{$tablet} {
+            width: 700px;
+        }
+    }
+    &__background1 {
+        background-color: $ABOUT_BACKGROUND1;
+    }
+    &__background2 {
+        background-color: $ABOUT_BACKGROUND2;
+    }
+    &__background3 {
+        background-color: $ABOUT_BACKGROUND3;
+    }
+
+    &__background2Active {
+        background-color: $ABOUT_BACKGROUND3;
+        transition: all ease .5s;
+        width: 0px;
+        height: 100%;
+    }
+    &__background3Active {
+        background-color: $ABOUT_BACKGROUND2;
+        transition: all ease .5s;
+        width: 0px;
+        height: 100%;
+    }
+}
+
+// Modifier
+.c-about--reveal {
+
+    .c-about {  //NAMESPACE
+        &__background2Active {
+            width: 100%;
+        }
+        &__background3Active {
+            width: 100%;
+        }
+        &__description {
+            height: 15em;
+        }
+        &__image {
+            width: 22em;
+        }
+    }
+
+}

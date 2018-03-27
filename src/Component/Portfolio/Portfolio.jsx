@@ -29,7 +29,6 @@ class Portfolio extends Component {
                 <div className="c-portfolio__typography">
                     work
                 </div>
-                <Line />
             </div>
             <div className="container">
                 <div className="c-portfolio__container">

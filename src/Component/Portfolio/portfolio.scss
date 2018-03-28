@@ -1,31 +1,21 @@
 @import 'configs/shared.scss';
 
 .c-portfolio {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
 
     &__container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 50px;
-
-        @media #{$notDesktop} {
-            grid-template-columns: 1fr;
-        }
-    }
-
-    &__background {
-        font-family: 'Roboto', sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
         position: relative;
-        margin: 4em 0 8em;
+        height: 360px;
     }
-    &__typography {
-        font-size: 5em;
-        background-color: white;
-        padding: 0em 2.3em;
-        border-radius: 71px;
+    &__dot {
+        color: $PRIMARY;
+    }
+    &__header {
+        margin: 1em 1em 2em;
+    }
+    &__title {
+        font-size: 3em;
     }
 
 }

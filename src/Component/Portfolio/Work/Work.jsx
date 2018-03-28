@@ -1,29 +1,45 @@
 import React, { Component } from 'react';
+import Hammer from 'react-hammerjs';
 
 class Work extends Component {
+
+    state = {
+        
+    }
+
+    panList = (e) => {
+        console.log(e);
+    }
+
+    panHandler = (evt) => {
+        switch(evt.direction) {
+            case 2:
+                console.log('pan Left');
+                break;
+            case 4:
+                console.log('pan Right');
+                break;
+            default:
+                break;
+        }
+        this.panList(evt);
+    }
+
     render() {
-        const {job, title, link, image} = this.props;
+        const {job, title, link, image, clickHandler, panHandler} = this.props;
 
         // Use placeholder if no image
         const imgSrc = image && `${process.env.PUBLIC_URL}/${image}` || 'http://via.placeholder.com/636x398' ;
 
         return (
-        <div className="c-work">
-            <div className="c-work__bg">
+        <Hammer onTap={clickHandler}
+            onPan={this.panHandler}
+        >
+            <div className="c-work">
+                <div className="c-work__bg"></div>
                 <img className="c-work__bgimage" src={imgSrc} />
             </div>
-            <div className="c-work__container">
-                <div className="c-work__job">
-                    {job}
-                </div>
-                <div className="c-work__title">
-                    {title}
-                </div>
-                <div className="c-work__link">
-                    { /*link*/}
-                </div>
-            </div>
-        </div>)
+        </Hammer>)
     }
 }
 

@@ -115,9 +115,11 @@ class Portfolio extends Component {
                     { /* <div><pre>{JSON.stringify(workList, null, 2) }</pre></div> */ }
                 </div>
             </Hammer>
-            <div class="c-portfolio__description">
-                <div class="c-portfolio__work">{ job }</div>
-                <div class="c-portfolio__jobTitle">{ title }</div>
+            <div className="c-portfolio__description">
+                <div className="c-portfolio__pullup">
+                    <div className="c-portfolio__work">{ job }</div>
+                    <div className="c-portfolio__jobTitle">{ title }</div>
+                </div>
             </div>
         </section>)
     }

@@ -71,11 +71,11 @@
 
     // @States
     &.is-active {
-        height: 340px;
+        height: 490px;
         width: 100%;
         top: 0em;
         right: 0em;
-        transform: translate(0%,-10%) !important;
+        transform: translate(0%,0%) !important;
         border-radius: 0;
         box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 

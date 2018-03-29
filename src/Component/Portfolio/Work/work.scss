@@ -2,13 +2,13 @@
 
 .c-work {
     $ACTIVE_HEIGHT: 340px;
-    $ACTIVE_WIDTH: 220px;
+    $ACTIVE_WIDTH: 250px;
 
     font-family: 'Roboto Condensed', sans-serif;
     
-    height: calc(#{$ACTIVE_HEIGHT} * .80);
-    width: calc(#{$ACTIVE_WIDTH} * .80);
-    right: 6em;
+    height: calc(#{$ACTIVE_HEIGHT} * .85);
+    width: calc(#{$ACTIVE_WIDTH} * .85);
+    transform: translate(-35%,-50%);
     z-index: 100;
 
     overflow: hidden;
@@ -16,7 +16,7 @@
     position: absolute;
     transition: all ease .5s;
     top: 50%;
-    transform: translateY(-50%);
+    right: 0em;
 
     &__bg {
         width: 100%;
@@ -30,26 +30,33 @@
     &:nth-child(1) {
         height: $ACTIVE_HEIGHT;
         width: $ACTIVE_WIDTH;
-        right: 1em;
+        transform: translate(-5%,-50%);
         z-index: 500;
     }
     &:nth-child(2) {
         height: calc(#{$ACTIVE_HEIGHT} * .95);
         width: calc(#{$ACTIVE_WIDTH} * .95);
-        right: 2.5em;
+        transform: translate(-15%,-50%);
         z-index: 400;
     }
     &:nth-child(3) {
         height: calc(#{$ACTIVE_HEIGHT} * .90);
         width: calc(#{$ACTIVE_WIDTH} * .90);
-        right: 4em;
+        transform: translate(-25%,-50%);
         z-index: 300;
     }
     &:nth-child(4) {
         height: calc(#{$ACTIVE_HEIGHT} * .85);
         width: calc(#{$ACTIVE_WIDTH} * .85);
-        right: 5.5em;
+        transform: translate(-35%,-50%);
         z-index: 200;
+    }
+    &:last-child {
+        height: $ACTIVE_HEIGHT;
+        width: $ACTIVE_WIDTH;
+        z-index: 60000;
+        transform: translate(0%,-50%);
+        display: none;
     }
 
     // @States

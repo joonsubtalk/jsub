@@ -16,7 +16,7 @@ class Portfolio extends Component {
         activeDistanceX : 0,
         panning : false,
         disableTransition : false,
-        refreshing : false
+        finishedSummaryAnimation : false
     }
 
     componentDidMount () {
@@ -57,8 +57,26 @@ class Portfolio extends Component {
         this.setState({workList : newList});
     }
 
+    clearSummaryAnimations = () => {
+
+        this.setState({finishedSummaryAnimation : true });
+
+        setTimeout(()=>{
+
+            this.setState({finishedSummaryAnimation : false });
+
+        }, 500)
+
+    }
+
     clickHandler = () => {
+
         this.setState({isActiveHighlighted : !this.state.isActiveHighlighted});
+
+
+        if (!this.state.isActiveHighlighted) {
+            this.clearSummaryAnimations();
+        }
     }
 
     panList = (e) => {
@@ -103,7 +121,7 @@ class Portfolio extends Component {
 
     render() {
 
-        const { workList, isActiveHighlighted } = this.state;
+        const { workList, isActiveHighlighted, finishedSummaryAnimation } = this.state;
         const activeJob = workList[0]; // always list first one
 
         const job = activeJob ? activeJob.job : '';
@@ -122,7 +140,7 @@ class Portfolio extends Component {
                     { /* <div><pre>{JSON.stringify(workList, null, 2) }</pre></div> */ }
                 </div>
             </Hammer>
-            <div className="c-portfolio__description">
+            <div className={`c-portfolio__description ${finishedSummaryAnimation ? 'c-portfolio__description--z' : 'c-portfolio__description--zs'}`}>
                 <div className="c-portfolio__pullup">
                     <div className="c-portfolio__profession">
                         <div className="c-portfolio__work">{ job }</div>

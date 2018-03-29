@@ -41,6 +41,14 @@ class Portfolio extends Component {
         })
     }
 
+    renderSummary = (par) => {
+        if (par.length < 1) return;
+        return par.map((point, idx) => {
+            return <p key={idx}>{point}</p>
+        })
+
+    }
+
     popPushList = () => {
         const { workList } = this.state;
         const newList = workList.slice(1);
@@ -51,12 +59,9 @@ class Portfolio extends Component {
 
     clickHandler = () => {
         this.setState({isActiveHighlighted : !this.state.isActiveHighlighted});
-        console.log(this.state.isActiveHighlighted)
     }
 
     panList = (e) => {
-
-        console.log(e);
 
         // Force next Item in list
         if (this.state.activeDistanceX > 50 && !this.state.panning) {
@@ -103,6 +108,8 @@ class Portfolio extends Component {
 
         const job = activeJob ? activeJob.job : '';
         const title = activeJob ? activeJob.title : '';
+        const description = activeJob ? activeJob.description : '';
+        console.log(description);
 
         return (
         <section className={`c-portfolio ${isActiveHighlighted ? 'c-portfolio--active' : ''}`}>
@@ -117,8 +124,13 @@ class Portfolio extends Component {
             </Hammer>
             <div className="c-portfolio__description">
                 <div className="c-portfolio__pullup">
-                    <div className="c-portfolio__work">{ job }</div>
-                    <div className="c-portfolio__jobTitle">{ title }</div>
+                    <div className="c-portfolio__profession">
+                        <div className="c-portfolio__work">{ job }</div>
+                        <div className="c-portfolio__jobTitle">{ title }</div>
+                    </div>
+                    <div className="c-portfolio__summary">
+                        { this.renderSummary(description)}
+                    </div>
                 </div>
             </div>
         </section>)

@@ -4,6 +4,8 @@
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     min-height: 39em;
+    position: relative;
+    overflow: hidden;
 
     &__container {
         position: relative;
@@ -20,12 +22,12 @@
         margin: 0;
     }
     &__description {
-        position: relative;
+        position: absolute;
         z-index: 2000;
+        width: 100%;
     }
     &__pullup {
         position: absolute;
-        background-color: $COLOR_WHITE;
         width: 100%;
         height: 2em;
         bottom: 0;
@@ -35,7 +37,6 @@
         position: relative;
         bottom: 0;
         transition: all ease .2s;
-        background-color: white;
         text-transform: capitalize;
         color: $WORK_JOB_TITLE;
         font-family: 'Muli', sans-serif;
@@ -44,6 +45,19 @@
         font-size: 1.5em;
         text-transform: uppercase;
     }
+    &__profession {
+        background-color: $COLOR_WHITE;
+        display: inline-block;
+        padding: 1em;
+    }
+    &__summary {
+        font-family: 'Muli', sans-serif;
+        background-color: $COLOR_WHITE;
+    }
+    &__summary > p {
+        margin: 0;
+        padding: 1em;
+    }
 
 }
 
@@ -51,13 +65,8 @@
 
     .c-portfolio {
 
-        &__jobTitle {
-            z-index: 1000;
-        }
-
         &__pullup {
             position: absolute;
-            background-color: $COLOR_WHITE;
             height: 10em;
             bottom: 0;
         }

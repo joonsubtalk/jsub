@@ -10,37 +10,62 @@ export const info = {
                 job : 'mediatemple',
                 title : 'Frontend Developer',
                 link : 'https://www.mediatemple.net',
-                image : 'image/mediatemple-sm.jpg'
+                image : 'image/mediatemple-sm.jpg',
+                description : [
+                    'Beautifying webpages with the best practice of CSS BEM methodologies',
+                    'Implementing Google Analytics with 3rd party Blast consultant',
+                    'Prevented spam bots by adding ReCaptcha to submission forms',
+                    'Architect SPA for DomainConnect\'s UI using React',
+                    'Integrated Salesforce into Media Temple forms',
+                    'Deliver multiple landing pages for Media Temple\'s promo and product offerings',
+                    'White-labeling a full React component library to Media Temple\'s branding standards',
+                    'Contributed to ux-core2 React component repos used across multiple companies',
+                ]
             },
             { 
                 job : 'zazzle',
                 title : 'UI Engineer',
                 link : 'https://www.zazzle.com',
-                image : 'image/zazzle-sm.jpg'
+                image : 'image/zazzle-sm.jpg',
+                description : [
+                    ''
+                ]
             },
             { 
                 job : 'coram design center',
                 title : 'Freelance - web developer',
                 link : 'http://www.coramdesigncenter.com',
-                image : 'image/design-sm.jpg'
+                image : 'image/design-sm.jpg',
+                description : [
+                    ''
+                ]
             },
             { 
                 job : 'coram realty',
                 title : 'Freelance - web developer',
                 link : 'http://www.coramrealty.com',
-                image : 'image/realty-sm.jpg'
+                image : 'image/realty-sm.jpg',
+                description : [
+                    ''
+                ]
             },
             { 
                 job : 'COPAKB',
                 title : 'web developer',
                 link : 'http://www.heartproteome.org',
-                image : 'image/copakb-sm.jpg'
+                image : 'image/copakb-sm.jpg',
+                description : [
+                    ''
+                ]
             },
             { 
                 job : 'MEATOES',
                 title : 'game developer',
                 link : 'https://www.meatoes.com',
-                image : 'image/minion-sm.jpg'
+                image : 'image/minion-sm.jpg',
+                description : [
+                    ''
+                ]
             },
         ]
     },

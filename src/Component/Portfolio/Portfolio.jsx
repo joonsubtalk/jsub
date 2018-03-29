@@ -15,7 +15,8 @@ class Portfolio extends Component {
         isActiveHighlighted : false,
         activeDistanceX : 0,
         panning : false,
-        disableTransition : false 
+        disableTransition : false,
+        refreshing : false
     }
 
     componentDidMount () {
@@ -30,6 +31,7 @@ class Portfolio extends Component {
             return <Work key={job}
                     id= { idx }
                     job={job}
+                    highlight={this.state.isActiveHighlighted}
                     clickHandler={this.clickHandler}
                     title={title}
                     disableTransition={this.state.disableTransition}
@@ -42,21 +44,14 @@ class Portfolio extends Component {
     popPushList = () => {
         const { workList } = this.state;
         const newList = workList.slice(1);
-        
+
         newList.push(workList[0]);
         this.setState({workList : newList});
     }
 
-    pushList = () => {
-        const { workList } = this.state;
-        const newList = workList.slice(-1);
-        newList.push(workList);
-        newList.pop();
-        this.setState({workList : newList});
-    }
-
     clickHandler = () => {
-        console.log('click');
+        this.setState({isActiveHighlighted : !this.state.isActiveHighlighted});
+        console.log(this.state.isActiveHighlighted)
     }
 
     panList = (e) => {
@@ -67,6 +62,7 @@ class Portfolio extends Component {
         if (this.state.activeDistanceX > 50 && !this.state.panning) {
 
             this.setState({activeDistanceX : 0});
+            this.setState({isActiveHighlighted : false});
             this.popPushList();
 
         } else if (!this.state.panning) {
@@ -91,9 +87,6 @@ class Portfolio extends Component {
         this.setState({panning: true});
         this.setState({disableTransition: true});
         switch(evt.direction) {
-            case 2:
-                console.log('pan Left');
-                break;
             case 4:
                 console.log('pan Right');
                 break;
@@ -103,40 +96,28 @@ class Portfolio extends Component {
         this.panList(evt);
     }
 
-    swipeHandler = (evt) => {
-        switch(evt.direction) {
-            case 2:
-                console.log('swipe Left');
-                break;
-            case 4:
-        this.popPushList();
-                break;
-            default:
-                break;
-        }
-    }
-
     render() {
 
-        const { workList } = this.state;
+        const { workList, isActiveHighlighted } = this.state;
         const activeJob = workList[0]; // always list first one
 
         const job = activeJob ? activeJob.job : '';
         const title = activeJob ? activeJob.title : '';
 
         return (
-        <section className="c-portfolio">
+        <section className={`c-portfolio ${isActiveHighlighted ? 'c-portfolio--active' : ''}`}>
             <div className="c-portfolio__header">
                 <h2 className="c-portfolio__title">Work<span className="c-portfolio__dot">.</span></h2>
             </div>
-            <Hammer onSwipe={this.swipeHandler} onPan={this.panHandler} onPanEnd={this.panEndHandler} >
+            <Hammer onPan={this.panHandler} onPanEnd={this.panEndHandler} >
                 <div className="c-portfolio__container">
                     { this.renderWorks(workList) }
                     { /* <div><pre>{JSON.stringify(workList, null, 2) }</pre></div> */ }
                 </div>
             </Hammer>
-            <div>
-                { title } - { job }
+            <div class="c-portfolio__description">
+                <div class="c-portfolio__work">{ job }</div>
+                <div class="c-portfolio__jobTitle">{ title }</div>
             </div>
         </section>)
     }

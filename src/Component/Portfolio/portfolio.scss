@@ -6,7 +6,7 @@
 
     &__container {
         position: relative;
-        height: 360px;
+        height: 28em;
     }
     &__dot {
         color: $PRIMARY;
@@ -16,6 +16,39 @@
     }
     &__title {
         font-size: 3em;
+        margin: 0;
     }
 
+    &__description {
+        position: relative;
+        overflow: hidden;
+        padding: 1em;
+    }
+    &__jobTitle {
+        position: relative;
+        bottom: 0;
+        transition: all ease .2s;
+        background-color: white;
+        text-transform: capitalize;
+        opacity: .7;
+    }
+    &__work {
+        font-size: 1.5em;
+        text-transform: uppercase;
+    }
+
+}
+
+.c-portfolio--active {
+
+    .c-portfolio {
+
+        &__jobTitle {
+            z-index: 1000;
+        }
+    }
+
+    .c-work:not(:first-child) {
+        opacity: 0;
+    }
 }

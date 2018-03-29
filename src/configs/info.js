@@ -10,37 +10,37 @@ export const info = {
                 job : 'mediatemple',
                 title : 'Frontend Developer',
                 link : 'https://www.mediatemple.net',
-                image : 'image/mediatemple.jpg'
+                image : 'image/mediatemple-sm.jpg'
             },
             { 
                 job : 'zazzle',
                 title : 'UI Engineer',
                 link : 'https://www.zazzle.com',
-                image : 'image/zazzle.jpg'
+                image : 'image/zazzle-sm.jpg'
             },
             { 
                 job : 'coram design center',
                 title : 'Freelance - web developer',
                 link : 'http://www.coramdesigncenter.com',
-                image : 'image/design.jpg'
+                image : 'image/design-sm.jpg'
             },
             { 
                 job : 'coram realty',
                 title : 'Freelance - web developer',
                 link : 'http://www.coramrealty.com',
-                image : 'image/realty.jpg'
+                image : 'image/realty-sm.jpg'
             },
             { 
                 job : 'COPAKB',
                 title : 'web developer',
                 link : 'http://www.heartproteome.org',
-                image : 'image/copakb.jpg'
+                image : 'image/copakb-sm.jpg'
             },
             { 
                 job : 'MEATOES',
                 title : 'game developer',
                 link : 'https://www.meatoes.com',
-                image : 'image/minion.jpg'
+                image : 'image/minion-sm.jpg'
             },
         ]
     },

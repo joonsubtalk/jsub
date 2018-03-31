@@ -1,0 +1,10 @@
+.c-stripe {
+    height: 30em;
+    width: 30em;
+    position: absolute;
+    background-color: $PRIMARY;
+    top: 20em;
+    left: 10em;
+    border-radius: 50%;
+    transform: rotate(30deg);
+}

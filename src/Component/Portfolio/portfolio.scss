@@ -2,6 +2,7 @@
 
 .c-portfolio {
     font-family: 'Roboto', sans-serif;
+    font-weight: 700;
     font-size: 1rem;
     min-height: 39em;
     position: relative;
@@ -58,6 +59,12 @@
         margin: 0;
         padding: 1em;
     }
+    &__link {
+        color: $PRIMARY;
+        text-decoration: none;
+        margin: 0;
+        padding: 1em;
+    }
 
 }
 
@@ -68,9 +75,10 @@
         &__description {
             z-index: 2000;
         }
+
         &__pullup {
             position: absolute;
-            height: 10em;
+            height: 11em;
             bottom: 0;
         }
     }
@@ -82,7 +90,7 @@
 
 .c-portfolio__description--z {
 
-    .c-portfolio {
+    &.c-portfolio {
 
         &__description {
             z-index: 2000;

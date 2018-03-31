@@ -38,7 +38,7 @@ class Footer extends Component{
                     </div>
                 </div>
                 <div className="container">
-                    <div className="o-footer__legal">{year} &copy; Joonsub.com | Made with code and love</div>
+                    <div className="o-footer__legal">{year} &copy; Joonsub.com | Coded with love</div>
                 </div>
             </footer>
         )

@@ -5,6 +5,7 @@
     $ACTIVE_WIDTH: 225px;
 
     font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
 
     z-index: 100;
 
@@ -14,10 +15,10 @@
     top: 50%;
     right: 1em;
 
-    height: calc(#{$ACTIVE_HEIGHT} * .85);
-    width: calc(#{$ACTIVE_WIDTH} * .85);
-    transform: translate(-45%,-50%);
-    z-index: 200;
+    height: 273px;
+    width: 146px;
+    transform: translate(-110%,-50%);
+    z-index: 100;
 
     transition: all ease .5s;
 
@@ -60,13 +61,6 @@
         width: calc(#{$ACTIVE_WIDTH} * .75);
         transform: translate(-70%,-50%);
         z-index: 200;
-    }
-    &:last-child {
-        height: $ACTIVE_HEIGHT;
-        width: $ACTIVE_WIDTH;
-        z-index: 60000;
-        transform: translate(100%,-50%);
-        display: none;
     }
 
     // @States

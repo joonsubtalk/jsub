@@ -1,5 +1,6 @@
 @import './configs/u-responsive.scss';
 @import './configs/u-text.scss';
+@import url('https://fonts.googleapis.com/css?family=Muli|Roboto+Condensed:700|Roboto:700');
 
 body {
     font-family: 'Muli', sans-serif;
@@ -7,6 +8,7 @@ body {
 
 /* Components */
 @import './Component/About/about.scss';
+@import './Component/Stripe/stripe.scss';
 @import './Component/CallToAction/callToAction.scss';
 @import './Component/Footer/footer.scss';
 @import './Component/Header/header.scss';

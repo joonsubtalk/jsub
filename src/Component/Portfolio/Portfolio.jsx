@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Hammer from 'react-hammerjs';
 import Work from './Work/Work';
+import SimpleWork from './Work/SimpleWork';
 import Line from './Line/Line';
 
 import { info } from '../../configs/info.js';
@@ -12,6 +13,7 @@ class Portfolio extends Component {
 
     state = {
         workList : [],
+        wait : false,
         isActiveHighlighted : false,
         activeDistanceX : 0,
         panning : false,
@@ -23,20 +25,28 @@ class Portfolio extends Component {
         this.setState({ workList : info.portfolio.works })
     }
 
+    renderActiveWork = (work) => {
+
+        if (!work) return;
+        const {job, title, link, image} = work;
+        return <Work
+                id={0}
+                highlight={this.state.isActiveHighlighted}
+                clickHandler={this.clickHandler}
+                disableTransition={this.state.disableTransition}
+                offsetX={this.state.activeDistanceX}
+                image={image}
+                />
+    }
+
     renderWorks = (works) => {
         return works.map((work, idx) => {
 
             const {job, title, link, image} = work;
 
-            return <Work key={job}
+            return <SimpleWork key={job}
                     id= { idx }
-                    job={job}
                     highlight={this.state.isActiveHighlighted}
-                    clickHandler={this.clickHandler}
-                    title={title}
-                    disableTransition={this.state.disableTransition}
-                    offsetX={this.state.activeDistanceX}
-                    link={link}
                     image={image} />
         })
     }
@@ -65,7 +75,7 @@ class Portfolio extends Component {
 
             this.setState({finishedSummaryAnimation : false });
 
-        }, 500)
+        }, 700)
 
     }
 
@@ -102,21 +112,34 @@ class Portfolio extends Component {
 
     panEndHandler = (evt) => {
         this.setState({panning: false});
-        this.setState({disableTransition: false});
         this.panList(evt);
+        setTimeout(()=> {
+            this.setState({disableTransition: false});
+        },0);
     }
 
     panHandler = (evt) => {
-        this.setState({panning: true});
-        this.setState({disableTransition: true});
-        switch(evt.direction) {
-            case 4:
-                console.log('pan Right');
-                break;
-            default:
-                break;
+
+        if (!this.state.wait){
+
+            this.setState({wait : true});
+
+            this.setState({panning: true});
+            this.setState({disableTransition: true});
+            switch(evt.direction) {
+                case 4:
+                    console.log('pan Right');
+                    break;
+                default:
+                    break;
+            }
+            this.panList(evt);
+
+            setTimeout(() => {
+                this.setState({wait : false});
+            }, 25);
+
         }
-        this.panList(evt);
     }
 
     render() {
@@ -127,6 +150,7 @@ class Portfolio extends Component {
         const job = activeJob ? activeJob.job : '';
         const title = activeJob ? activeJob.title : '';
         const description = activeJob ? activeJob.description : '';
+        const link = activeJob && activeJob.link ? activeJob.link : undefined;
         console.log(description);
 
         return (
@@ -136,8 +160,8 @@ class Portfolio extends Component {
             </div>
             <Hammer onPan={this.panHandler} onPanEnd={this.panEndHandler} >
                 <div className="c-portfolio__container">
-                    { this.renderWorks(workList) }
-                    { /* <div><pre>{JSON.stringify(workList, null, 2) }</pre></div> */ }
+                    { this.renderActiveWork(activeJob) }
+                    { this.renderWorks(workList.slice(1, workList.length)) }
                 </div>
             </Hammer>
             <div className={`c-portfolio__description ${finishedSummaryAnimation ? 'c-portfolio__description--z' : 'c-portfolio__description--zs'}`}>
@@ -148,6 +172,7 @@ class Portfolio extends Component {
                     </div>
                     <div className="c-portfolio__summary">
                         { this.renderSummary(description)}
+                        <a className="c-portfolio__link" href={ link }>visit { job }</a>
                     </div>
                 </div>
             </div>

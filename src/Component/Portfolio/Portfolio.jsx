@@ -32,7 +32,6 @@ class Portfolio extends Component {
         return <Work
                 id={0}
                 highlight={this.state.isActiveHighlighted}
-                clickHandler={this.clickHandler}
                 disableTransition={this.state.disableTransition}
                 offsetX={this.state.activeDistanceX}
                 image={image}
@@ -82,7 +81,6 @@ class Portfolio extends Component {
     clickHandler = () => {
 
         this.setState({isActiveHighlighted : !this.state.isActiveHighlighted});
-
 
         if (!this.state.isActiveHighlighted) {
             this.clearSummaryAnimations();
@@ -151,14 +149,14 @@ class Portfolio extends Component {
         const title = activeJob ? activeJob.title : '';
         const description = activeJob ? activeJob.description : '';
         const link = activeJob && activeJob.link ? activeJob.link : undefined;
-        console.log(description);
+        console.log("description", description);
 
         return (
         <section className={`c-portfolio ${isActiveHighlighted ? 'c-portfolio--active' : ''}`}>
             <div className="c-portfolio__header">
                 <h2 className="c-portfolio__title">Work<span className="c-portfolio__dot">.</span></h2>
             </div>
-            <Hammer onPan={this.panHandler} onPanEnd={this.panEndHandler} >
+            <Hammer onTap={this.clickHandler} onPan={this.panHandler} onPanEnd={this.panEndHandler} >
                 <div className="c-portfolio__container">
                     { this.renderActiveWork(activeJob) }
                     { this.renderWorks(workList.slice(1, workList.length)) }

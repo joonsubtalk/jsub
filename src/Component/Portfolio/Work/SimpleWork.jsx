@@ -7,6 +7,7 @@ class SimpleWork extends Component {
         // Use placeholder if no image
         const imgSrc = image && `${process.env.PUBLIC_URL}/${image}` || 'http://via.placeholder.com/636x398' ;
         const bgstyle = { opacity : id * .20 }
+        console.log('simple')
 
         return (
             <div className="c-work">

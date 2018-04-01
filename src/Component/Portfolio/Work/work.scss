@@ -17,8 +17,9 @@
 
     height: 273px;
     width: 146px;
-    transform: translate(-110%,-50%);
+    transform: translate(0%,-50%);
     z-index: 100;
+    right: 3em;
 
     transition: all ease .5s;
 
@@ -39,28 +40,28 @@
     &:nth-child(1) {
         height: $ACTIVE_HEIGHT;
         width: $ACTIVE_WIDTH;
-        transform: translate(-25%,-50%);
         z-index: 500;
+        right: 1em;
         box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     }
     &:nth-child(2) {
         height: calc(#{$ACTIVE_HEIGHT} * .95);
         width: calc(#{$ACTIVE_WIDTH} * .95);
-        transform: translate(-15%,-50%);
         z-index: 400;
+        right: 2em;
         box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     }
     &:nth-child(3) {
         height: calc(#{$ACTIVE_HEIGHT} * .90);
         width: calc(#{$ACTIVE_WIDTH} * .90);
-        transform: translate(-32%,-50%);
+        right: 3em;
         z-index: 300;
     }
     &:nth-child(4) {
         height: calc(#{$ACTIVE_HEIGHT} * .75);
         width: calc(#{$ACTIVE_WIDTH} * .75);
-        transform: translate(-70%,-50%);
         z-index: 200;
+        right: 4em;
     }
 
     // @States

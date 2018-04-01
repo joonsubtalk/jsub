@@ -1,5 +1,5 @@
 export const info = {
-    aboutBlurb : 'I\'m a Frontend developer who passionately makes user-centric web apps in the tech industry.',
+    aboutBlurb : 'I\'m a Frontend Developer who specializes in user-centric web applications. I make pretty websites.',
     aboutDescription : [
         'Studied Computer Science at California State University Northridge, and proceeded to graduate studies at University of California Los Angeles with an emphasis in mobile technologies.',
         'After a few years living in the Bay and beautifying Zazzle.com as a UI developer, he\'s back in Los Angeles working at MediaTemple as a frontend developer.'

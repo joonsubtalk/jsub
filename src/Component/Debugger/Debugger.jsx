@@ -12,7 +12,6 @@ const styles= {
 class Debugger extends Component {
     render () {
         return(<div className="o-debugger" style={styles}>
-            Type
             <div className="o-debugger__type">
                 type: 
             </div>

@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 class About extends Component {
 
 	render() {
 
-		const { description, pic, blurb } = this.props;
+		const { pic, blurb } = this.props;
 
 		return (
 			<section className="c-about u-baseSpacing">
@@ -28,9 +27,5 @@ class About extends Component {
 		);
 	}
 }
-
-About.propTypes = {
-	description: PropTypes.arrayOf(PropTypes.string)
-};
 
 export default About;

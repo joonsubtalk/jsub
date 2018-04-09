@@ -30,6 +30,7 @@
         position: absolute;
         z-index: 0;
         width: 100%;
+        left: 0;
     }
     &__pullup {
         position: absolute;
@@ -87,13 +88,13 @@
         }
     }
 
-    .c-work:not(:first-child) {
+    .c-work:not(:nth-child) {
         opacity: 0;
     }
 
-    .c-work:first-child {
+    .c-work:nth-child(3) {
         width: 100vw;
-        height: 100vh;
+        border-radius: 0;
     }
 }
 

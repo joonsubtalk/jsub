@@ -13,7 +13,6 @@ class Portfolio extends Component {
         isActiveHighlighted : false,
         activeDistanceX : 0,
         panning : false,
-        disableTransition : false,
         finishedSummaryAnimation : false
     }
 
@@ -50,6 +49,14 @@ class Portfolio extends Component {
         this.setState({workList : newList});
     }
 
+    popList = () => {
+        const { workList } = this.state;
+        
+        const newList = [workList[workList.length-1], ...workList.slice(0, -1)];
+
+        this.setState({workList : newList});
+    }
+
     clearSummaryAnimations = () => {
 
         this.setState({finishedSummaryAnimation : true });
@@ -64,18 +71,20 @@ class Portfolio extends Component {
 
     swipeHandler = (e) => {
 
-        console.log(e.direction)
         switch(e.direction) {
             case 4 :    // right
                 this.popPushList();
                 break;
             case 2 :    // left
-            
-            console.log(this.state.workList);
+                this.popList();
                 break;
             default :
                 break;
         }
+        console.log(this.state.workList);
+        
+        if (this.state.isActiveHighlighted)
+            this.clickHandler();
 
     }
 
@@ -111,17 +120,20 @@ class Portfolio extends Component {
                         { this.renderWorks(workList) }
                     </div>
                 </Hammer>
-                <div className={`c-portfolio__description ${finishedSummaryAnimation ? 'c-portfolio__description--z' : 'c-portfolio__description--zs'}`}>
-                    <div className="c-portfolio__pullup">
-                        <div className="c-portfolio__profession">
-                            <div className="c-portfolio__work">{ job }</div>
-                            <div className="c-portfolio__jobTitle">{ title }</div>
-                        </div>
-                        <div className="c-portfolio__summary">
-                            { this.renderSummary(description)}
-                            <a className="c-portfolio__link" href={ link }>visit { job }</a>
-                        </div>
+            </div>
+            
+            <div className={`c-portfolio__description ${finishedSummaryAnimation ? 'c-portfolio__description--z' : 'c-portfolio__description--zs'}`}>
+                <div className="c-portfolio__pullup">
+                    <div className="c-portfolio__profession">
+                        <div className="c-portfolio__work">{ job }</div>
+                        <div className="c-portfolio__jobTitle">{ title }</div>
                     </div>
+                    {/*
+                    <div className="c-portfolio__summary">
+                        { this.renderSummary(description)}
+                        <a className="c-portfolio__link" href={ link }>visit { job }</a>
+                    </div>
+                    */}
                 </div>
             </div>
         </section>)

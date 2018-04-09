@@ -18,20 +18,9 @@ class Work extends Component {
         const {image, offsetX, highlight, id, disableTransition} = this.props;
         // Use placeholder if no image
         const imgSrc = (image && `${process.env.PUBLIC_URL}/${image}`) || 'http://via.placeholder.com/636x398';
-        const style = id === 0 &&false && !this.state.refresh? { 
-            right : `-${offsetX/10}em`,
-            transition : `${ disableTransition ? 'none' : 'all ease .5s'}`
-        } : {
-            height: `378px`,
-            width: `202px`,
-            transition : `${ disableTransition ? 'none' : 'all ease .5s'}`
-        };
-        const bgstyle = { opacity : .20 };
-
-        console.log('hi')
 
         return (
-            <div className={`c-work ${highlight && id === 0 ? 'is-active' : ''}`} style={style}>
+            <div className={`c-work ${highlight && id === 2 ? 'is-active' : ''}`} >
                 <div className="c-work__bg"></div>
                 <img className="c-work__bgimage" alt={''} src={imgSrc} />
             </div>)

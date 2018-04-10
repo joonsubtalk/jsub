@@ -18,6 +18,9 @@ class Portfolio extends Component {
 
     componentDidMount () {
         this.setState({ workList : info.portfolio.works })
+        console.log(
+            `https://codepen.io/anon/pen/KoJNMP`
+        )
     }
 
     renderWorks = (works) => {

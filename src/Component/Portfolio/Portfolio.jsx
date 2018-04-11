@@ -13,14 +13,12 @@ class Portfolio extends Component {
         isActiveHighlighted : false,
         activeDistanceX : 0,
         panning : false,
-        finishedSummaryAnimation : false
+        finishedSummaryAnimation : false,
+        swipe : 0,
     }
 
     componentDidMount () {
         this.setState({ workList : info.portfolio.works })
-        console.log(
-            `https://codepen.io/anon/pen/KoJNMP`
-        )
     }
 
     renderWorks = (works) => {
@@ -44,20 +42,30 @@ class Portfolio extends Component {
     }
 
     popPushList = () => {
-        const { workList } = this.state;
+        // const { workList } = this.state;
         
-        const newList = workList.slice(1);
+        // const newList = workList.slice(1);
 
-        newList.push(workList[0]);
-        this.setState({workList : newList});
+        // newList.push(workList[0]);
+        // this.setState({workList : newList});
+        this.setState({swipe : 2});
+
+        setTimeout(()=>{
+            this.setState({swipe : 0});
+        },200);
     }
 
     popList = () => {
-        const { workList } = this.state;
+        // const { workList } = this.state;
 
-        const newList = [workList[workList.length-1], ...workList.slice(0, -1)];
+        // const newList = [workList[workList.length-1], ...workList.slice(0, -1)];
 
-        this.setState({workList : newList});
+        // this.setState({workList : newList});
+        this.setState({swipe : 4});
+
+        setTimeout(()=>{
+            this.setState({swipe : 0});
+        },200);
     }
 
     clearSummaryAnimations = () => {
@@ -100,9 +108,20 @@ class Portfolio extends Component {
         }
     }
 
+    getDirection(direction) {
+        switch (direction) {
+            case 2:
+                return 'c-portfolio--moveRight';
+            case 4:
+                return 'c-portfolio--moveLeft';
+            default:
+                return '';
+        }
+    }
+
     render() {
 
-        const { workList, isActiveHighlighted, finishedSummaryAnimation } = this.state;
+        const { workList, isActiveHighlighted, finishedSummaryAnimation, swipe } = this.state;
         const activeJob = workList[2]; // always list first one
 
         const job = activeJob ? activeJob.job : '';
@@ -112,7 +131,7 @@ class Portfolio extends Component {
         console.log("description", description);
 
         return (
-        <section className={`c-portfolio ${isActiveHighlighted ? 'c-portfolio--active' : ''}`}>
+        <section className={`c-portfolio ${this.getDirection(swipe)} ${isActiveHighlighted ? 'c-portfolio--active' : ''}`}>
             <div className="c-portfolio__content">
                 <div className="c-portfolio__header">
                     <h2 className="c-portfolio__title">Work<span className="c-portfolio__dot">.</span></h2>

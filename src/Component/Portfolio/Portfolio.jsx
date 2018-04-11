@@ -51,7 +51,7 @@ class Portfolio extends Component {
 
     popList = () => {
         const { workList } = this.state;
-        
+
         const newList = [workList[workList.length-1], ...workList.slice(0, -1)];
 
         this.setState({workList : newList});

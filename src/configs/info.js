@@ -67,6 +67,11 @@ export const info = {
         subText : 'I also teach 1:1 lessons on webdevelopment.',
         ctaText : 'Schedule'
     },
+    footerInfo : {
+        notBeingUsed : '',
+        journal : 'When',
+        awesome : 'Let\'s make something together! This website was made.'
+    },
     footerSocial : {
         github : 'https://github.com/joonsubtalk',
         linkedin : 'https://www.linkedin.com/in/joonsub/',

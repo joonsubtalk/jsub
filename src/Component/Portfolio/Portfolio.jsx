@@ -15,6 +15,7 @@ class Portfolio extends Component {
         panning : false,
         finishedSummaryAnimation : false,
         swipe : 0,
+        animating : false
     }
 
     componentDidMount () {
@@ -42,29 +43,32 @@ class Portfolio extends Component {
     }
 
     popPushList = () => {
-        // const { workList } = this.state;
+        const { workList } = this.state;
         
-        // const newList = workList.slice(1);
-
-        // newList.push(workList[0]);
-        // this.setState({workList : newList});
+        const newList = workList.slice(1);
+        
         this.setState({swipe : 2});
 
         setTimeout(()=>{
             this.setState({swipe : 0});
+
+            newList.push(workList[0]);
+            this.setState({workList : newList});
+            this.setState({animating : false });
         },200);
     }
 
     popList = () => {
-        // const { workList } = this.state;
+        const { workList } = this.state;
 
-        // const newList = [workList[workList.length-1], ...workList.slice(0, -1)];
+        const newList = [workList[workList.length-1], ...workList.slice(0, -1)];
 
-        // this.setState({workList : newList});
         this.setState({swipe : 4});
 
         setTimeout(()=>{
             this.setState({swipe : 0});
+            this.setState({workList : newList});
+            this.setState({animating : false });
         },200);
     }
 
@@ -82,6 +86,9 @@ class Portfolio extends Component {
 
     swipeHandler = (e) => {
 
+        if (this.state.animating) return false;
+
+        this.setState({animating : true });
         switch(e.direction) {
             case 4 :    // right
                 this.popPushList();

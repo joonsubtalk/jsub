@@ -14,14 +14,13 @@ class Portfolio extends Component {
         activeDistanceX : 0,
         panning : false,
         finishedSummaryAnimation : false,
-        idx : 0
+        counter : 0
     }
 
     componentDidMount () {
-        this.setState({ workList : info.portfolio.works })
-        console.log(
-            `https://codepen.io/anon/pen/KoJNMP`
-        )
+
+        this.setState({ workList : info.portfolio.works });
+
     }
 
     renderWorks = (works) => {
@@ -29,7 +28,9 @@ class Portfolio extends Component {
 
             const {job, image} = work;
 
-            return <SimpleWork key={idx + this.state.idx}
+            if (idx > 4) return;
+
+            return <SimpleWork key={idx + this.state.counter}
                     id= { idx }
                     highlight={this.state.isActiveHighlighted}
                     image={image} />
@@ -50,7 +51,9 @@ class Portfolio extends Component {
         const newList = workList.slice(1);
 
         newList.push(workList[0]);
-        this.setState({idx : this.state.idx+=1});
+        this.setState((prevState, props) => ({
+            counter: prevState.counter + 1
+        })); 
         this.setState({workList : newList});
     }
 
@@ -59,7 +62,9 @@ class Portfolio extends Component {
 
         const newList = [workList[workList.length-1], ...workList.slice(0, -1)];
 
-        this.setState({idx : this.state.idx-=1});
+        this.setState((prevState, props) => ({
+            counter: prevState.counter - 1
+        })); 
         this.setState({workList : newList});
     }
 
@@ -87,8 +92,7 @@ class Portfolio extends Component {
             default :
                 break;
         }
-        console.log(this.state.workList);
-        
+
         if (this.state.isActiveHighlighted)
             this.clickHandler();
 
@@ -106,13 +110,11 @@ class Portfolio extends Component {
     render() {
 
         const { workList, isActiveHighlighted, finishedSummaryAnimation } = this.state;
-        const activeJob = workList[2]; // always list first one
-
+        const activeJob = workList[2];
         const job = activeJob ? activeJob.job : '';
         const title = activeJob ? activeJob.title : '';
         const description = activeJob ? activeJob.description : '';
         const link = activeJob && activeJob.link ? activeJob.link : undefined;
-        console.log("description", description);
 
         return (
         <section className={`c-portfolio ${isActiveHighlighted ? 'c-portfolio--active' : ''}`}>
@@ -134,12 +136,10 @@ class Portfolio extends Component {
                         <div className="c-portfolio__work">{ job }</div>
                         <div className="c-portfolio__jobTitle">{ title }</div>
                     </div>
-                    {/*
                     <div className="c-portfolio__summary">
                         { this.renderSummary(description)}
                         <a className="c-portfolio__link" href={ link }>visit { job }</a>
                     </div>
-                    */}
                 </div>
             </div>
         </section>)

@@ -13,7 +13,8 @@ class Portfolio extends Component {
         isActiveHighlighted : false,
         activeDistanceX : 0,
         panning : false,
-        finishedSummaryAnimation : false
+        finishedSummaryAnimation : false,
+        idx : 0
     }
 
     componentDidMount () {
@@ -28,7 +29,7 @@ class Portfolio extends Component {
 
             const {job, image} = work;
 
-            return <SimpleWork key={job}
+            return <SimpleWork key={idx + this.state.idx}
                     id= { idx }
                     highlight={this.state.isActiveHighlighted}
                     image={image} />
@@ -49,6 +50,7 @@ class Portfolio extends Component {
         const newList = workList.slice(1);
 
         newList.push(workList[0]);
+        this.setState({idx : this.state.idx+=1});
         this.setState({workList : newList});
     }
 
@@ -57,6 +59,7 @@ class Portfolio extends Component {
 
         const newList = [workList[workList.length-1], ...workList.slice(0, -1)];
 
+        this.setState({idx : this.state.idx-=1});
         this.setState({workList : newList});
     }
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { info } from '../../configs/info.js';
 
 const CallToAction = ( props ) => {

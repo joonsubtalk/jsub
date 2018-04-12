@@ -1,31 +1,110 @@
 @import 'configs/shared.scss';
 
 .c-portfolio {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    min-height: 39em;
+    position: relative;
+    overflow: hidden;
+    padding: 4em 1em;
 
     &__container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 50px;
+        position: relative;
+        height: 28em;
+    }
+    &__content {
+        padding: 1em;
+    }
+    &__dot {
+        color: $PRIMARY;
+    }
+    &__header {
+        padding: 3 em 1em 2em;
+    }
+    &__title {
+        font-size: 3em;
+        margin: 0;
+    }
+    &__description {
+        position: absolute;
+        z-index: 0;
+        width: 100%;
+        left: 0;
+    }
+    &__pullup {
+        position: absolute;
+        width: 100%;
+        height: 0;
+        bottom: 0;
+        transition: all ease .5s;
+    }
+    &__jobTitle {
+        position: relative;
+        bottom: 0;
+        transition: all ease .2s;
+        text-transform: capitalize;
+        color: $WORK_JOB_TITLE;
+        font-family: 'Muli', sans-serif;
+    }
+    &__work {
+        font-size: 1.5em;
+        text-transform: uppercase;
+    }
+    &__profession {
+        background-color: $COLOR_WHITE;
+        display: inline-block;
+        padding: 1em;
+    }
+    &__summary {
+        font-family: 'Muli', sans-serif;
+        background-color: $COLOR_WHITE;
+    }
+    &__summary > p {
+        margin: 0;
+        padding: 1em;
+    }
+    &__link {
+        color: $PRIMARY;
+        text-decoration: none;
+        margin: 0;
+        padding: 1em;
+    }
 
-        @media #{$notDesktop} {
-            grid-template-columns: 1fr;
+}
+
+.c-portfolio--active {
+
+    .c-portfolio {
+
+        &__description {
+            z-index: 2000;
+        }
+
+        &__pullup {
+            position: absolute;
+            height: 11em;
+            bottom: 0;
         }
     }
 
-    &__background {
-        font-family: 'Roboto', sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        position: relative;
-        margin: 4em 0 8em;
-    }
-    &__typography {
-        font-size: 5em;
-        background-color: white;
-        padding: 0em 2.3em;
-        border-radius: 71px;
+    .c-work:not(:nth-child) {
+        opacity: 0;
     }
 
+    .c-work:nth-child(3) {
+        width: 100vw;
+        border-radius: 0;
+    }
+}
+
+.c-portfolio__description--z {
+
+    &.c-portfolio {
+
+        &__description {
+            z-index: 2000;
+        }
+
+    }
 }

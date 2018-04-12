@@ -1,0 +1,11 @@
+@import 'configs/shared.scss';
+
+.c-stripe {
+    height: 50em;
+    width: 21em;
+    position: absolute;
+    background-color: $PRIMARY;
+    bottom: -50%;
+    right: -3em;
+    transform: rotate(50deg);
+}

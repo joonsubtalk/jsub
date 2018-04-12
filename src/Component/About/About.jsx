@@ -1,31 +1,31 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 class About extends Component {
 
 	render() {
 
-		const { description, pic, blurb } = this.props;
+		const { pic, blurb } = this.props;
 
 		return (
-			<section className="c-about">
+			<section className="c-about u-baseSpacing">
 				<div className="c-about__container">
+					{ /* <div className="c-about__header">About Me</div> */}
 					<div className="c-about__content">
-						<div className="c-about__title">Joon</div>
-						<div className="c-about__teaser">{blurb}</div>
-						<div className="c-about__description">{description}</div>
+						<div className="c-about__card">
+							<div className="c-about__title">Joon<span className="c-portfolio__dot">.</span></div>
+							<div className="c-about__teaser">{blurb}</div>
+						</div>
+						<div className="c-about__featuredImage">
+							<img className="c-about__image" src={pic} alt="profile pic of joon" />
+						</div>
 					</div>
-					<div className="c-about__featuredImage">
-						<img className="c-about__image" src={pic} alt="profile pic of joon" />
-					</div>
+				</div>
+				<div className="c-about__stripeBackground">
+					<div className="c-stripe"></div>
 				</div>
 			</section>
 		);
 	}
 }
-
-About.propTypes = {
-	description: PropTypes.arrayOf(PropTypes.string)
-};
 
 export default About;

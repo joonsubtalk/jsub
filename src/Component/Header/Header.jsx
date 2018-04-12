@@ -17,6 +17,7 @@ class Header extends Component {
                     </div>
                     <img className="o-header__bgimage" src={scope} alt="no scope" />
                 </div>
+                <div className="o-header__gradient"></div>
             </header>
         )
     }

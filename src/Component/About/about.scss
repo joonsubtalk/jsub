@@ -1,61 +1,297 @@
 @import 'configs/shared.scss';
+
 .c-about {
-    $IMAGE_SIZE: 20em;
-    font-size: 1rem;
+    $ABOUT_HEIGHT: 60em;
+    $SUBHEIGHT: $ABOUT_HEIGHT - 18em;
+
+    background-color: $ABOUT_BACKGROUND;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    @media #{$desktop} {
+        height: $ABOUT_HEIGHT;
+    }
+
+    @media #{$laptop} {
+        height: $ABOUT_HEIGHT - 10em;
+    }
+
+    @media #{$tablet} {
+        height: $ABOUT_HEIGHT;
+    }
+
+    @media #{$mobile} {
+        flex-direction: column;
+    }
+
+    &__dot {
+        color: $PRIMARY;
+    }
+
+    &__image {
+        width: 100%;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+        @media #{$notMobile} {
+            transition: all ease .5s;
+            width: 37em;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            right: 0em;
+        }
+    }
+
+    &__featuredImage {
+        @media #{$notMobile} {
+            position: relative;
+            overflow: hidden;
+        }
+
+        @media #{$desktop} {
+            width: 22em;
+        }
+    
+        @media #{$laptop} {
+            width: 20em;
+        }
+    
+        @media #{$tablet} {
+            width: 15em;
+        }
+    }
 
     &__container {
-        position: relative;
-    }
-    &__content {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-areas:
-            "te te te . ."
-            "tr tr tr tr tr"
-            "dn dn dn dn dn";
-        padding-top:1em;
-    }
-    &__card {
-
-    }
-    &__title {
-        font-size: 4.5em;
-        font-family: 'Roboto', sans-serif;
-        grid-area: te;
-        background-color: $ABOUT_BACKGROUND;
         display: flex;
-        justify-content: center;
-        align-self: center;
-    }
-    &__clear {
-        grid-area: cr;
-        background-color: transparent;
-    }
-    &__teaser {
-        grid-area: tr;
-        background-color: $ABOUT_BACKGROUND;
-        padding: 1em;
-    }
-    &__description {
-        grid-area: dn;
-        background-color: $ABOUT_BACKGROUND;
-        padding: 1em;
-    }
-    &__featuredImage {
-        top: 0;
-        z-index: -1;
-        position: absolute;
         width: 100%;
-        height: auto;
+        flex-direction: column;
+        z-index: 100;
+
+        @media #{$notMobile} {
+            position: absolute;
+            z-index: 1000;
+            height: $SUBHEIGHT;
+            width: 100%;
+            display: flex;
+        }
+
+        @media #{$desktop} {
+            position: absolute;
+            height: $SUBHEIGHT;
+            display: flex;
+            width: 1200px;
+        }
+    
+        @media #{$laptop} {
+            width: 970px;
+        }
+    
+        @media #{$tablet} {
+            width: 700px;
+        }
     }
-    &__image {
+
+    &__header {
+        padding: 1em;
+
+        @media #{$notMobile} {
+            position: absolute;
+            top: 12%;
+            left: 4em;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+
+        @media #{$notMobile} {
+            flex-direction: row;
+        }
+
+        @media #{$desktop} {
+            padding: 6em 10em 6em 2em;
+        }
+
+        @media #{$laptop} {
+            padding: 6em 0em 6em 2em;
+        }
+    }
+
+    &__card {
+        margin-bottom: 2em;
+
+        @media #{$notMobile} {
+            margin-bottom: 0;
+            padding: 3em 6em 3em 2em;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media #{$desktop} {
+            padding: 3em 6em 3em 2em;
+        }
+    
+        @media #{$laptop} {
+            padding: 3em 3em 3em 2em;
+        }
+    
+        @media #{$tablet} {
+            padding: 0;
+        }
+    }
+
+    &__description {
+        width: 27em;
+        height: 0;
+        color: #484848;// TODO ::
+        line-height: 1.5;
+        overflow: hidden;
         transition: all ease .5s;
-        width: $IMAGE_SIZE;
-        height: $IMAGE_SIZE;
-        border-radius: 50% 0 50% 0;
-        object-fit: cover;
-        position: absolute;
-        right: 0em;
-        top: 0em;
+        font-size: 1.1em;
+
+        @media #{$tablet} {
+            width: 24.3em;
+        }
     }
+
+    &__readmore {
+        @media #{$notMobile} {
+            position: absolute;
+        }
+        width: 10em;
+        height: 40px;
+        top: 80%;
+        left: 4em;
+        border-radius: 25px;
+        background-color: $PRIMARY;
+        color: $COLOR_WHITE;
+        border: 1px solid $PRIMARY;
+        outline: none;
+
+        &:hover {
+            background-color: $COLOR_WHITE;
+            cursor: pointer;
+            color: $PRIMARY;
+        }
+    }
+
+    &__teaser {
+        width: 100%;
+        color: $COLOR_DARKGRAPHITE;
+        line-height: 1.5;
+        font-size: 1.1em;
+        margin-bottom: 1em;
+
+        @media #{$tablet} {
+            width: 20em;
+        }
+
+        @media #{desktop} {
+            width: 27em;
+        }
+    }
+
+    &__text {
+        @media #{$tablet} {
+            padding: 1em;
+        }
+    }
+
+    &__title {
+        font-size: 3em;
+        margin: 0;
+        margin-bottom: .2em;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+
+        @media #{$tablet} {
+            font-size: 5em;
+        }
+    }
+
+    //
+    // Stripe Background
+    &__stripeBackground {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    //
+    // Background
+    &__background {
+        @media #{$notMobile} {
+            display: grid;
+            grid-template-columns: 5fr 2fr 1fr;
+            height: $SUBHEIGHT;
+            position: absolute;
+            z-index: 500;
+            background-color: $ABOUT_BACKGROUND;
+            width: 100%;
+        }
+
+        @media #{$desktop} {
+            width: 1200px;
+        }
+    
+        @media #{$laptop} {
+            grid-template-columns: 5fr 0fr 2fr;
+            width: 970px;
+        }
+    
+        @media #{$tablet} {
+            width: 700px;
+        }
+    }
+    &__background1 {
+        background-color: $ABOUT_BACKGROUND1;
+    }
+    &__background2 {
+        background-color: $ABOUT_BACKGROUND2;
+    }
+    &__background3 {
+        background-color: $ABOUT_BACKGROUND3;
+    }
+
+    &__background2Active {
+        background-color: $ABOUT_BACKGROUND3;
+        transition: all ease .5s;
+        width: 0px;
+        height: 100%;
+    }
+    &__background3Active {
+        background-color: $ABOUT_BACKGROUND2;
+        transition: all ease .5s;
+        width: 0px;
+        height: 100%;
+    }
+}
+
+// Modifier
+.c-about--reveal {
+
+    .c-about {  //NAMESPACE
+        &__background2Active {
+            width: 100%;
+        }
+        &__background3Active {
+            width: 100%;
+        }
+        &__description {
+            height: 15em;
+        }
+        &__image {
+            width: 22em;
+        }
+    }
+
 }

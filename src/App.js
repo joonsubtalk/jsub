@@ -6,7 +6,7 @@ import Footer from './Component/Footer/Footer';
 import CallToAction from './Component/CallToAction/CallToAction';
 import { info } from './configs/info.js';
 import Debugger from './Component/Debugger/Debugger';
-import profilepic from './images/prof.jpg';
+import profilepic from './images/joon.jpg';
 import Statistics from './Component/Statistics/Statistics';
 
 class App extends Component {

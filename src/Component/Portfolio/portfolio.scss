@@ -55,20 +55,38 @@
         background-color: $COLOR_WHITE;
         display: inline-block;
         padding: 1em;
+        position: relative;
+        bottom: -1em;
     }
     &__summary {
         font-family: 'Muli', sans-serif;
         background-color: $COLOR_WHITE;
+        line-height: 1.5;
+        padding: 1em 0;
     }
     &__summary > p {
         margin: 0;
         padding: 1em;
+        opacity: 0;
+        min-height: 9em;
+        transition: opacity ease-out .5s;
     }
     &__link {
         color: $PRIMARY;
         text-decoration: none;
         margin: 0;
         padding: 1em;
+        min-height: 3em;
+        text-align: center;
+        display: block;
+        position: relative;
+    }
+    &__icon {
+        top: 0.25em;
+        width: .75em;
+        position: relative;
+        right: 0.2em;
+        fill: $PRIMARY;
     }
 
 }
@@ -86,18 +104,25 @@
             height: 11em;
             bottom: 0;
         }
+
+        &__summary > p {
+            margin: 0;
+            padding: 1em;
+            opacity: 1;
+        }
     }
 
-    .c-work:not(:nth-child) {
+    .c-work:not(:nth-child(3)) {
         opacity: 0;
     }
 
     .c-work:nth-child(3) {
-        width: 100vw;
-        height: 40em;
         box-shadow: 0 0px 0px rgba(0,0,0,0.16), 0 0px 0px rgba(0,0,0,0.23);
         transform: translate(-50%, -57%);
         border-radius: 0;
+        transform: scale(2) translate(-25%, -20%) !important;
+        animation: slide;
+        animation-duration: 10s;
     }
 }
 
@@ -111,3 +136,19 @@
 
     }
 }
+
+@keyframes slide {
+    0% {
+        margin-top: 0%;
+    }
+  
+    50% {
+        margin-top: -50%;
+        filter: blur(0) grayscale(0%);
+    }
+
+    100% {
+        margin-top: 0%;
+        filter: blur(20px) grayscale(20%);
+    }
+  }

@@ -15,15 +15,16 @@
     top: 50%;
     left: 50%;
     transform: translate(-275%,-50%);
-    height: calc(#{$ACTIVE_HEIGHT});
-    width: calc(#{$ACTIVE_WIDTH});
+    height: $ACTIVE_HEIGHT;
+    width: $ACTIVE_WIDTH;
     z-index: 100;
     opacity: .4;
 
     transition: all ease .5s;
 
     &__bgimage {
-        width: auto;
+        height : 100%;
+        object-fit:cover
     }
 
     // // @Pseudo
@@ -60,7 +61,6 @@
         width: 100%;
         top: 0em;
         right: 0em;
-        transform: translate(0%,0%) !important;
         border-radius: 0;
         box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 

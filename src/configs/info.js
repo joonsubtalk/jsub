@@ -12,29 +12,29 @@ export const info = {
                 link : 'http://www.heartproteome.org',
                 image : 'image/copakb-sm.jpg',
                 description : [
-                    ''
+                    'Refactored UI for main C# web application. Extended mass spectra data viewer with D3.js and Lorikeet.js.'
                 ]
             },
             { 
                 job : 'MEATOES',
-                title : 'game developer',
+                title : 'Freelance - Game developer',
                 link : 'https://www.meatoes.com',
                 image : 'image/minion-sm.jpg',
                 description : [
-                    ''
+                    'Lead game developer for Minion flapjack run. Designed and developed game with entertainment industry.'
                 ]
             },
             { 
-                job : 'mediatemple',
+                job : 'Media Temple',
                 title : 'Frontend Developer',
                 link : 'https://www.mediatemple.net',
                 image : 'image/mediatemple-sm.jpg',
                 description : [
-                    'Delivered multiple landing pages for Media Temple\'s promo and product offerings. Actively contributed to ux-core2 React component repos used across multiple companies',
+                    'Delivered multiple landing pages for Media Temple\'s promo and product offerings. Actively contributed to ux-core2 React component repos used across multiple companies.'
                 ]
             },
             { 
-                job : 'zazzle',
+                job : 'Zazzle',
                 title : 'UI Engineer',
                 link : 'https://www.zazzle.com',
                 image : 'image/zazzle-sm.jpg',
@@ -43,7 +43,7 @@ export const info = {
                 ]
             },
             { 
-                job : 'coram design center',
+                job : 'Coram Design Center',
                 title : 'Freelance - web developer',
                 link : 'http://www.coramdesigncenter.com',
                 image : 'image/design-sm.jpg',
@@ -52,7 +52,7 @@ export const info = {
                 ]
             },
             { 
-                job : 'coram realty',
+                job : 'Coram Realty',
                 title : 'Freelance - web developer',
                 link : 'http://www.coramrealty.com',
                 image : 'image/realty-sm.jpg',

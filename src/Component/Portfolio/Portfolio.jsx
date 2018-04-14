@@ -138,7 +138,13 @@ class Portfolio extends Component {
                     </div>
                     <div className="c-portfolio__summary">
                         { this.renderSummary(description)}
-                        <a className="c-portfolio__link" href={ link }>visit { job }</a>
+                        
+                        <a className="c-portfolio__link" href={ link }>
+                            <svg viewBox="0 0 16 20" x="0px" y="0px" class="c-portfolio__icon">
+                                <path d="M11 0l1.781 1.781-.5.5-4 4-.688.719 1.406 1.406.719-.688 4-4 .5-.5 1.781 1.781v-5h-5zm-11 2v14h14v-8h-2v6h-10v-10h6v-2h-8z"/>
+                            </svg>
+                            visit { job }
+                        </a>
                     </div>
                 </div>
             </div>

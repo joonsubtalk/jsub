@@ -140,15 +140,16 @@
 @keyframes slide {
     0% {
         margin-top: 0%;
+        filter: blur(0) grayscale(0%);
     }
   
     50% {
-        margin-top: -50%;
-        filter: blur(0) grayscale(0%);
+        margin-top: -10%;
+        filter: blur(2px) grayscale(20%);
     }
 
     100% {
         margin-top: 0%;
-        filter: blur(20px) grayscale(20%);
+        filter: blur(0px) grayscale(0%);
     }
   }

@@ -39,7 +39,7 @@ export const info = {
                 link : 'https://www.zazzle.com',
                 image : 'image/zazzle-sm.jpg',
                 description : [
-                    ''
+                    'Created landing pages Zazzle Maker, Heart, and Women\'s tank top promo and product offerings. Developed the webhook interface for Zazzle\'s native app.'
                 ]
             },
             { 
@@ -48,7 +48,7 @@ export const info = {
                 link : 'http://www.coramdesigncenter.com',
                 image : 'image/design-sm.jpg',
                 description : [
-                    ''
+                    'Refactored Wordpress site to a React single page webapp. Added Google Analytics and GTM for market awareness.'
                 ]
             },
             { 
@@ -57,7 +57,7 @@ export const info = {
                 link : 'http://www.coramrealty.com',
                 image : 'image/realty-sm.jpg',
                 description : [
-                    ''
+                    'Refactored Wordpress site to a React single page webapp. Added Google Analytics and GTM for market awareness.'
                 ]
             }
         ]

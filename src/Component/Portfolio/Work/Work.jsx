@@ -15,7 +15,7 @@ class Work extends Component {
     }
 
     render() {
-        const {image, offsetX, highlight, id, disableTransition} = this.props;
+        const {image, highlight, id} = this.props;
         // Use placeholder if no image
         const imgSrc = (image && `${process.env.PUBLIC_URL}/${image}`) || 'http://via.placeholder.com/636x398';
 

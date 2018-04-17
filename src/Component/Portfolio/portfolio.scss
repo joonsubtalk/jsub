@@ -118,11 +118,12 @@
 
     .c-work:nth-child(3) {
         box-shadow: 0 0px 0px rgba(0,0,0,0.16), 0 0px 0px rgba(0,0,0,0.23);
-        transform: translate(-50%, -57%);
         border-radius: 0;
         transform: scale(2) translate(-25%, -20%) !important;
-        animation: slide;
-        animation-duration: 10s;
+    }
+
+    .c-work:nth-child(3) > .c-work__bgimage {
+        animation: smoothSlide 10s ease;
     }
 }
 
@@ -137,19 +138,19 @@
     }
 }
 
-@keyframes slide {
+@keyframes smoothSlide {
     0% {
         margin-top: 0%;
-        filter: blur(0) grayscale(0%);
+        margin-left: 0%;
     }
   
     50% {
         margin-top: -10%;
-        filter: blur(2px) grayscale(20%);
+        margin-left: -10%;
     }
 
     100% {
         margin-top: 0%;
-        filter: blur(0px) grayscale(0%);
+        margin-left: 0%;
     }
   }

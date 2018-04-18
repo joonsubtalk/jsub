@@ -15,6 +15,7 @@
     }
     &__content {
         padding: 1em;
+        position: relative;
     }
     &__dot {
         color: $PRIMARY;
@@ -88,6 +89,31 @@
         right: 0.2em;
         fill: $PRIMARY;
     }
+    &__swipeIcon {
+        top: 0.25em;
+        width: 2.5em;
+        height: 2.5em;
+        padding: 2em;
+        opacity: .8;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 10000;
+        background-color: white;
+        border-radius: 50%;
+        animation: swappa 2s ease infinite;
+        transition: left ease .5s, opacity ease .2s;
+    }
+
+}
+
+.c-portfolio--hasActioned {
+
+    .c-portfolio__swipeIcon {
+        opacity: 0;
+        display: none;
+    }
 
 }
 
@@ -141,16 +167,34 @@
 @keyframes smoothSlide {
     0% {
         margin-top: 0%;
-        margin-left: 0%;
+        filter: blur(0);
     }
-  
+
     50% {
         margin-top: -10%;
-        margin-left: -10%;
+        filter: blur(2px);
     }
 
     100% {
         margin-top: 0%;
-        margin-left: 0%;
+        filter: blur(0);
     }
-  }
+}
+
+@keyframes swappa {
+    0% {
+        left: 50%;
+    }
+
+    49% {
+        left: 35%;
+    }
+
+    50% {
+        left: 50%;
+    }
+
+    100% {
+        left: 65%;
+    }
+}

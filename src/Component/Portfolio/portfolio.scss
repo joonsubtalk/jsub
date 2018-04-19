@@ -62,6 +62,8 @@
     &__summary {
         font-family: 'Muli', sans-serif;
         background-color: $COLOR_WHITE;
+        font-size: 1.1em;
+        color: $COLOR_DARKGRAPHITE;
         line-height: 1.5;
         padding: 1em 0;
     }
@@ -69,7 +71,7 @@
         margin: 0;
         padding: 1em;
         opacity: 0;
-        min-height: 9em;
+        min-height: 7em;
         transition: opacity ease-out .5s;
     }
     &__link {

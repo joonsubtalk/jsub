@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Hammer from 'react-hammerjs';
 import SimpleWork from './Work/SimpleWork';
+import Work from './Work/Work';
 
 import { info } from '../../configs/info.js';
 
@@ -24,14 +25,37 @@ class Portfolio extends Component {
     }
 
     renderWorks = (works) => {
+
         return works.map((work, idx) => {
 
             const {image} = work;
 
             if (idx > 4) return '';
 
-            return <SimpleWork key={idx + this.state.counter}
+            return <Work key={idx + this.state.counter}
                     id= { idx }
+                    highlight={this.state.isActiveHighlighted}
+                    image={image} />
+        })
+    }
+
+    renderSimpleWorks = (works) => {
+
+        if (works.length < 3) {
+            return null;
+        }
+
+        const newList = works.slice(2);
+        newList.push(works[0], works[1]);
+        console.log(newList);
+
+        return newList.map((work, idx) => {
+
+            const {image, link} = work;
+
+            return <SimpleWork key={idx + this.state.counter}
+                    id={ idx }
+                    link={link}
                     highlight={this.state.isActiveHighlighted}
                     image={image} />
         })
@@ -138,10 +162,13 @@ class Portfolio extends Component {
                 </svg>
                 <Hammer onTap={this.clickHandler}
                     onSwipe={this.swipeHandler}>
-                    <div className="c-portfolio__container">
+                    <div className="c-portfolio__container--mobile">
                         { this.renderWorks(workList) }
                     </div>
                 </Hammer>
+                <div className="c-portfolio__container--nonMobile">
+                    { this.renderSimpleWorks(workList) }
+                </div>
             </div>
             
             <div className={`c-portfolio__description ${finishedSummaryAnimation ? 'c-portfolio__description--z' : 'c-portfolio__description--zs'}`}>

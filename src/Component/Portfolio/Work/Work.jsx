@@ -1,29 +1,17 @@
 import React, { Component } from 'react';
 class Work extends Component {
 
-    state = {
-        refresh : false
-    }
-
-    componentWillReceiveProps (nextProps) {
-        if (nextProps.image !== this.props.image) {
-            this.setState({refresh: true});
-            setTimeout(()=>{
-                this.setState({refresh: false});
-            }, 0);
-        }
-    }
-
     render() {
-        const {image, highlight, id} = this.props;
+        const {image, id} = this.props;
         // Use placeholder if no image
-        const imgSrc = (image && `${process.env.PUBLIC_URL}/${image}`) || 'http://via.placeholder.com/636x398';
+        const imgSrc = (image && `${process.env.PUBLIC_URL}/${image}`) || 'http://via.placeholder.com/636x398' ;
+        const classnameModifier = `c-work__item-${id+1}`;
 
         return (
-            <div className={`c-work ${highlight && id === 2 ? 'is-active' : ''}`} >
-                <div className="c-work__bg"></div>
+            <div className={`c-work ${classnameModifier}`}>
                 <img className="c-work__bgimage" alt={''} src={imgSrc} />
-            </div>)
+            </div>
+        );
     }
 }
 

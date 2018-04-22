@@ -9,9 +9,34 @@
     overflow: hidden;
     padding: 4em 1em;
 
-    &__container {
-        position: relative;
-        height: 28em;
+    &__container--mobile {
+        display: none;
+        @media #{$notDesktop} {
+            position: relative;
+            height: 28em;
+            display: block;
+        }
+    }
+    &__container--nonMobile {
+        display: none;
+        @media #{$aboveTablet} {
+            position: relative;
+            height: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 50px;
+
+            margin: 0 auto;
+            transition: width ease .2s;
+        
+            @media #{$desktop} {
+                width: 1200px;
+            }
+        
+            @media #{$laptop} {
+                width: 970px;
+            }
+        }
     }
     &__content {
         padding: 1em;
@@ -21,17 +46,37 @@
         color: $PRIMARY;
     }
     &__header {
-        padding: 3 em 1em 2em;
+
+        @media #{$notMobile} {
+            padding: 3em 1em 2em;
+        }
     }
     &__title {
         font-size: 3em;
         margin: 0;
+
+        @media #{$notMobile} {
+            margin: 0 auto;
+            transition: width ease .2s;
+        
+            @media #{$desktop} {
+                width: 1200px;
+            }
+        
+            @media #{$laptop} {
+                width: 970px;
+            }
+        }
     }
     &__description {
         position: absolute;
         z-index: 0;
         width: 100%;
         left: 0;
+        
+        @media #{$aboveTablet} {
+            display: none;
+        }
     }
     &__pullup {
         position: absolute;
@@ -106,6 +151,10 @@
         border-radius: 50%;
         animation: swappa 2s ease infinite;
         transition: left ease .5s, opacity ease .2s;
+
+        @media #{$aboveTablet} {
+            display: none;
+        }
     }
 
 }
@@ -129,7 +178,7 @@
 
         &__pullup {
             position: absolute;
-            height: 11em;
+            height: 12em;
             bottom: 0;
         }
 

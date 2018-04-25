@@ -63,7 +63,7 @@ export const info = {
         ]
     },
     callToAction : {
-        title : 'Impressed?',
+        title : 'Are you ready?',
         subText : 'I also teach 1:1 lessons on webdevelopment.',
         ctaText : 'Schedule'
     },
@@ -71,5 +71,8 @@ export const info = {
         github : 'https://github.com/joonsubtalk',
         linkedin : 'https://www.linkedin.com/in/joonsub/',
         email : 'mailto:joonsubtalk@gmail.com?'
+    },
+    footerWisdom : {
+        wiseTitle : 'You\'re Awesome.'
     }
 }

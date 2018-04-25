@@ -7,6 +7,7 @@ class SimpleWork extends Component {
 
     render() {
         const {image, id, link} = this.props;
+        const { job, title, description } = this.props.work;
         // Use placeholder if no image
         const imgSrc = (image && `${process.env.PUBLIC_URL}/${image}`) || 'http://via.placeholder.com/636x398' ;
         const classnameModifier = `c-work__item-${id+1}`;
@@ -14,6 +15,14 @@ class SimpleWork extends Component {
         return (
             <div onClick={this.clickHandler} className={`c-work ${classnameModifier}`}>
                 <img className="c-work__bgimage" alt={''} src={imgSrc} />
+                <div className="c-work__panel">
+                    <div className="c-work__job">
+                        {job}
+                    </div>
+                    <div className="c-work__title">
+                        {title}
+                    </div>
+                </div>
             </div>
         );
     }

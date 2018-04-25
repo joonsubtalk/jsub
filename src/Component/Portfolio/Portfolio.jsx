@@ -56,6 +56,7 @@ class Portfolio extends Component {
             return <SimpleWork key={idx + this.state.counter}
                     id={ idx }
                     link={link}
+                    work={work}
                     highlight={this.state.isActiveHighlighted}
                     image={image} />
         })

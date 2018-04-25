@@ -23,8 +23,8 @@
             position: relative;
             height: auto;
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 50px;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 30px;
 
             margin: 0 auto;
             transition: width ease .2s;

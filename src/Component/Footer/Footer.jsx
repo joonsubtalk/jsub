@@ -10,13 +10,14 @@ class Footer extends Component{
         const {clickHandler} = this.props;
         const year = (new Date()).getFullYear();
         const {github, linkedin, email} = info.footerSocial;
+        const {wiseTitle} = info.footerWisdom;
 
         return (
             <footer className="o-footer u-baseSpacing">
                 <div className="container">
                     <div className="o-footer__container">
                         <div className="o-footer__partingWisdom">
-                            <div className="o-footer__cta">You're Awesome.</div>
+                            <div className="o-footer__cta">{wiseTitle}</div>
                             <div className="o-footer__text">Let's make something together! This website was made.</div>
                             <div className="o-footer__text">Hey... you made it this far. Want to see a secret?</div>
                             <button onClick={clickHandler}>Click Me</button>

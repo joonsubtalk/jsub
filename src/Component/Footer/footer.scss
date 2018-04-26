@@ -46,11 +46,15 @@
     &__text {
         width: 100%;
         font-size: 1.15em;
-        margin-bottom: .2em;
+        line-height: 1.4;
         color: darken($COLOR_WHITE, 25);
 
         @media #{$notMobile} {
             width: 20em;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 1.2em;
         }
     }
     &__container {

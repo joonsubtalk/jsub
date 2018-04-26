@@ -51,7 +51,8 @@
     &__cta {
         background-color: #a3caef;
         border: none;
-        color: #406c96;
+        color: $CTA_BACKGROUND;
+        font-weight: bold;
         padding: 1em 2em;
         text-align: center;
         text-decoration: none;

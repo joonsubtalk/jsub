@@ -7,7 +7,7 @@ class SimpleWork extends Component {
 
     render() {
         const {image, id, link} = this.props;
-        const { job, title, description } = this.props.work;
+        const { job, title, description, years } = this.props.work;
         // Use placeholder if no image
         const imgSrc = (image && `${process.env.PUBLIC_URL}/${image}`) || 'http://via.placeholder.com/636x398' ;
         const classnameModifier = `c-work__item-${id+1}`;
@@ -21,6 +21,9 @@ class SimpleWork extends Component {
                     </div>
                     <div className="c-work__title">
                         {title}
+                    </div>
+                    <div className="c-work__accolades">
+                        { years && <div className="c-work__years">{ years }</div> }
                     </div>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 export const info = {
-    aboutBlurb : 'I\'m a Frontend Developer specialing in user-centric web applications.',
+    aboutBlurb : 'I\'m a Frontend Developer with over 5 years of user-centric web application.',
     aboutDescription : [
         'Studied Computer Science at California State University Northridge, and proceeded to graduate studies at University of California Los Angeles with an emphasis in mobile technologies.',
         'After a few years living in the Bay and beautifying Zazzle.com as a UI developer, he\'s back in Los Angeles working at MediaTemple as a frontend developer.'
@@ -11,6 +11,7 @@ export const info = {
                 title : 'web developer',
                 link : 'http://www.heartproteome.org',
                 image : 'image/copakb-sm.jpg',
+                years : 1,
                 description : [
                     'Refactored UI for main C# web application. Extended mass spectra data viewer with D3.js and Lorikeet.js.'
                 ]
@@ -29,6 +30,7 @@ export const info = {
                 title : 'Frontend Developer',
                 link : 'https://www.mediatemple.net',
                 image : 'image/mediatemple-sm.jpg',
+                years : 1,
                 description : [
                     'Delivered multiple landing pages for Media Temple\'s promo and product offerings. Actively contributed to ux-core2 React component repos used across multiple companies.'
                 ]
@@ -38,6 +40,7 @@ export const info = {
                 title : 'UI Engineer',
                 link : 'https://www.zazzle.com',
                 image : 'image/zazzle-sm.jpg',
+                years : 2,
                 description : [
                     'Created landing pages Zazzle Maker, Heart, and Women\'s tank top promo and product offerings. Developed the webhook interface for Zazzle\'s native app.'
                 ]
@@ -63,9 +66,9 @@ export const info = {
         ]
     },
     callToAction : {
-        title : 'Are you ready?',
-        subText : 'I also teach 1:1 lessons on webdevelopment.',
-        ctaText : 'Schedule'
+        title : 'Let\'s make something together!',
+        subText : 'You have an awesome idea — I want to help you make it happen!',
+        ctaText : 'Get a Quote'
     },
     footerSocial : {
         github : 'https://github.com/joonsubtalk',
@@ -73,6 +76,6 @@ export const info = {
         email : 'mailto:joonsubtalk@gmail.com?'
     },
     footerWisdom : {
-        wiseTitle : 'You\'re Awesome.'
+        wiseTitle : 'Made by Joon.'
     }
 }

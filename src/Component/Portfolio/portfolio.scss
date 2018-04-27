@@ -136,6 +136,10 @@
         right: 0.2em;
         fill: $PRIMARY;
     }
+    & p {
+        font-weight: 400;
+    }
+
     &__swipeIcon {
         top: 0.25em;
         width: 2.5em;
@@ -197,10 +201,7 @@
         box-shadow: 0 0px 0px rgba(0,0,0,0.16), 0 0px 0px rgba(0,0,0,0.23);
         border-radius: 0;
         transform: scale(2) translate(-25%, -20%) !important;
-    }
-
-    .c-work:nth-child(3) > .c-work__bgimage {
-        animation: smoothSlide 10s ease;
+        filter: blur(1px);
     }
 }
 
@@ -215,22 +216,6 @@
     }
 }
 
-@keyframes smoothSlide {
-    0% {
-        margin-top: 0%;
-        filter: blur(0);
-    }
-
-    50% {
-        margin-top: -10%;
-        filter: blur(2px);
-    }
-
-    100% {
-        margin-top: 0%;
-        filter: blur(0);
-    }
-}
 
 @keyframes swappa {
     0% {

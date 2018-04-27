@@ -5,10 +5,10 @@
     $SUBHEIGHT: $ABOUT_HEIGHT - 18em;
 
     background-color: $ABOUT_BACKGROUND;
+    height: 42em;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
 
     @media #{$desktop} {
         height: $ABOUT_HEIGHT;
@@ -22,37 +22,22 @@
         height: $ABOUT_HEIGHT;
     }
 
-    @media #{$mobile} {
-        flex-direction: column;
-    }
-
-    &__dot {
-        color: $PRIMARY;
-    }
-
     &__image {
-        width: 100%;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-
-        @media #{$notMobile} {
-            transition: all ease .5s;
-            width: 37em;
-            height: 100%;
-            object-fit: cover;
-            position: absolute;
-            right: 0em;
-            box-shadow: none;
-        }
+        transition: all ease .5s;
+        width: 30em;
+        height: 115%;
+        object-fit: cover;
+        position: absolute;
+        right: 0em;
     }
 
     &__featuredImage {
-        @media #{$notMobile} {
-            position: relative;
-            overflow: hidden;
-        }
+        width: 22em;
+        position: relative;
+        overflow: hidden;
 
         @media #{$desktop} {
-            width: 23em;
+            width: 22em;
         }
     
         @media #{$laptop} {
@@ -65,18 +50,11 @@
     }
 
     &__container {
-        display: flex;
+        position: absolute;
+        z-index: 1000;
+        height: $SUBHEIGHT;
         width: 100%;
-        flex-direction: column;
-        z-index: 100;
-
-        @media #{$notMobile} {
-            position: absolute;
-            z-index: 1000;
-            height: $SUBHEIGHT;
-            width: 100%;
-            display: flex;
-        }
+        display: flex;
 
         @media #{$desktop} {
             position: absolute;
@@ -95,23 +73,13 @@
     }
 
     &__header {
-        padding: 1em;
-
-        @media #{$notMobile} {
-            position: absolute;
-            top: 12%;
-            left: 4em;
-        }
+        position: absolute;
+        top: 12%;
+        left: 4em;
     }
 
     &__content {
         display: flex;
-        flex-direction: column;
-        padding: 1em;
-
-        @media #{$notMobile} {
-            flex-direction: row;
-        }
 
         @media #{$desktop} {
             padding: 6em 10em 6em 2em;
@@ -123,23 +91,14 @@
     }
 
     &__card {
-        margin-bottom: 2em;
-        transition: all ease .2s;
-
-        @media #{$notMobile} {
-            margin-bottom: 0;
-            padding: 3em 6em 3em 2em;
-            background-color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+        padding: 3em 6em 3em 2em;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         @media #{$desktop} {
-            padding: 3em 4em 3em 2em;
-            flex-direction: column;
-            align-items: flex-start;
-            height: 24em;
+            padding: 3em 6em 3em 2em;
         }
     
         @media #{$laptop} {
@@ -166,9 +125,7 @@
     }
 
     &__readmore {
-        @media #{$notMobile} {
-            position: absolute;
-        }
+        position: absolute;
         width: 10em;
         height: 40px;
         top: 80%;
@@ -187,19 +144,16 @@
     }
 
     &__teaser {
-        width: 100%;
-        color: $COLOR_DARKGRAPHITE;
+        width: 27em;
+        height: 3em;
+        overflow: hidden;
+        color: $COLOR_DARKGRAPHITE;// TODO::
         line-height: 1.5;
         font-size: 1.1em;
-        margin-bottom: 1em;
+        transition: all ease .5s;
 
         @media #{$tablet} {
             width: 20em;
-        }
-
-        @media #{$desktop} {
-            padding-right: 14em;
-            width: 17em;
         }
     }
 
@@ -210,40 +164,21 @@
     }
 
     &__title {
-        font-size: 3em;
-        margin: 0;
+        font-size: 5em;
         margin-bottom: .2em;
         font-family: 'Roboto', sans-serif;
-        font-weight: 700;
-
-        @media #{$tablet} {
-            font-size: 5em;
-        }
-    }
-
-    //
-    // Stripe Background
-    &__stripeBackground {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        overflow: hidden;
     }
 
     //
     // Background
     &__background {
-        @media #{$notMobile} {
-            display: grid;
-            grid-template-columns: 5fr 2fr 1fr;
-            height: $SUBHEIGHT;
-            position: absolute;
-            z-index: 500;
-            background-color: $ABOUT_BACKGROUND;
-            width: 100%;
-        }
+        display: grid;
+        grid-template-columns: 5fr 2fr 1fr;
+        height: $SUBHEIGHT;
+        position: absolute;
+        z-index: 500;
+        background-color: $ABOUT_BACKGROUND;
+        width: 100%;
 
         @media #{$desktop} {
             width: 1200px;

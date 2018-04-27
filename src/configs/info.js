@@ -1,8 +1,8 @@
 export const info = {
     aboutBlurb : 'I\'m a Frontend Developer with over 5 years of user-centric web application.',
     aboutDescription : [
-        'Studied Computer Science at California State University Northridge, and proceeded to graduate studies at University of California Los Angeles with an emphasis in mobile technologies.',
-        'After a few years living in the Bay and beautifying Zazzle.com as a UI developer, he\'s back in Los Angeles working at MediaTemple as a frontend developer.'
+        'I graduated with a Computer Science degree at California State University Northridge, and pursued a graduate studies at University of California Los Angeles with an emphasis in mobile technologies in Computer Science.',
+        'After a few years living in the Bay and beautifying Zazzle.com as a UI developer, I\'m back in Los Angeles working at MediaTemple as a frontend developer.'
     ],
     portfolio : {
         works : [
@@ -66,9 +66,9 @@ export const info = {
         ]
     },
     callToAction : {
-        title : 'Let\'s make something together!',
-        subText : 'You have an awesome idea — I want to help you make it happen!',
-        ctaText : 'Get a Quote'
+        title : 'Ready to take the next step?',
+        subText : 'You have an awesome idea — I want to help you achieve it!',
+        ctaText : 'Get Quote'
     },
     footerSocial : {
         github : 'https://github.com/joonsubtalk',

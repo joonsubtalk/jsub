@@ -24,7 +24,7 @@ class Footer extends Component{
                         <div className="o-footer__social">
                             <div className="o-footer__write">
                                 <div className="o-footer__cta">I Journal.</div>
-                                <div className="o-footer__text">Ramblings from a coder who sees.</div>
+                                <div className="o-footer__text">Ramblings from a coder.</div>
                             </div>
                             <div className="o-footer__connect">
                                 <div className="o-footer__socialHeader">Let's Connect!</div>

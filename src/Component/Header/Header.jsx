@@ -11,7 +11,7 @@ class Header extends Component {
                     <div className="o-header__aligner">
                         <div className="o-header__content">
                             <div className="o-header__mark">Make your next move</div>
-                            <div className="o-header__subtext">Make a lasting impression. Hire me for highly performant website.</div>
+                            <div className="o-header__subtext">Make a lasting impression. All it takes is a partnership.</div>
                             <button className="o-header__cta">Start Making</button>
                         </div>
                     </div>

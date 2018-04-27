@@ -1,6 +1,6 @@
 @import 'configs/shared.scss';
 
-.c-work {
+.c-simplework {
     $ACTIVE_HEIGHT: 20em;
     $ACTIVE_WIDTH: 40em;
 
@@ -22,11 +22,6 @@
     transition: all ease .5s;
     border-radius: 10px;
     cursor: pointer;
-
-    @media #{$notDesktop} {
-        height: 420px;
-        width: 225px;
-    }
 
     @media #{$aboveTablet} {
         transform: none;
@@ -106,65 +101,6 @@
         }
     }
 
-    // // @Pseudo
-    &:nth-child(1) {
-        z-index: 300;
-        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-        transform: translate(175%,-50%);
-
-        @media #{$aboveTablet} {
-            transform: none;
-            box-shadow: none;
-            z-index: initial;
-        }
-    }
-    &:nth-child(2) {
-        z-index: 400;
-        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-        transform: translate(65%,-50%);
-
-        @media #{$aboveTablet} {
-            transform: none;
-            box-shadow: none;
-            z-index: initial;
-        }
-    }
-    &:nth-child(3) {
-        z-index: 500;
-        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-        transform: translate(-50%,-50%);
-        filter: blur(0);
-        opacity: 1;
-
-        @media #{$aboveTablet} {
-            transform: none;
-            box-shadow: none;
-            z-index: initial;
-        }
-    }
-    &:nth-child(4) {
-        z-index: 400;
-        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-        transform: translate(-165%,-50%);
-
-        @media #{$aboveTablet} {
-            transform: none;
-            box-shadow: none;
-            z-index: initial;
-        }
-    }
-    &:nth-child(5) {
-        z-index: 300;
-        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-        transform: translate(-275%,-50%);
-
-        @media #{$aboveTablet} {
-            transform: none;
-            box-shadow: none;
-            z-index: initial;
-        }
-    }
-
     // @States
     &.is-active {
         height: 413px;
@@ -174,7 +110,7 @@
         border-radius: 0;
         box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 
-        .c-work__bgimage {
+        .c-simplework__bgimage {
             width: 100%;
         }
     }

@@ -35,11 +35,11 @@ class About extends Component {
 				</div>
 				<div onMouseEnter={this.clickHandler} onMouseLeave={this.clickHandler} className="c-about__container">
 					<div className="c-about__header">About Me</div>
-					<button className="c-about__readmore">Learn More</button>
+					<button className="c-about__readmore">Read Journals</button>
 					<div className="c-about__content">
 						<div className="c-about__card">
 							<div className="c-about__text">
-								<div className="c-about__title">Joon</div>
+								<div className="c-about__title">Joon<span className="c-about__period">.</span></div>
 								<div className="c-about__teaser">{blurb}</div>
 								<div className="c-about__description">{this.renderArrayToParagraph(description)}</div>
 							</div>

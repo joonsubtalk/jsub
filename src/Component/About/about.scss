@@ -10,6 +10,10 @@
     justify-content: center;
     align-items: center;
 
+    @media #{$mobile} {
+        display: none;
+    }
+
     @media #{$desktop} {
         height: $ABOUT_HEIGHT;
     }
@@ -45,7 +49,7 @@
         }
     
         @media #{$tablet} {
-            width: 15em;
+            width: 16em;
         }
     }
 
@@ -55,6 +59,7 @@
         height: $SUBHEIGHT;
         width: 100%;
         display: flex;
+        overflow: hidden;
 
         @media #{$desktop} {
             position: absolute;
@@ -76,6 +81,10 @@
         position: absolute;
         top: 12%;
         left: 4em;
+
+        @media #{$tablet} {
+            left: 1em;
+        }
     }
 
     &__content {
@@ -124,6 +133,10 @@
         }
     }
 
+    &__period {
+        color: $PRIMARY;
+    }
+
     &__readmore {
         position: absolute;
         width: 10em;
@@ -131,15 +144,20 @@
         top: 80%;
         left: 4em;
         border-radius: 25px;
-        background-color: $PRIMARY;
-        color: $COLOR_WHITE;
+        background-color: $COLOR_WHITE;
+        color: $PRIMARY;
         border: 1px solid $PRIMARY;
         outline: none;
 
+        @media #{$tablet} {
+            top: 90%;
+            left: 1em;
+        }
+
         &:hover {
-            background-color: $COLOR_WHITE;
+            background-color: $PRIMARY;
             cursor: pointer;
-            color: $PRIMARY;
+            color: $COLOR_WHITE;
         }
     }
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Component/Header/Header';
 import About from './Component/About/About';
+import AboutMobile from './Component/About/AboutMobile';
 import Portfolio from './Component/Portfolio/Portfolio';
 import Footer from './Component/Footer/Footer';
 import CallToAction from './Component/CallToAction/CallToAction';
@@ -29,6 +30,9 @@ class App extends Component {
 				<Debugger />
 				<Header/>
 				<About description={aboutDescription}
+					blurb={aboutBlurb}
+					pic={profilepic} />
+				<AboutMobile description={aboutDescription}
 					blurb={aboutBlurb}
 					pic={profilepic} />
 				<Portfolio />

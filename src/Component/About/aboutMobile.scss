@@ -1,6 +1,6 @@
 @import 'configs/shared.scss';
 
-.c-about {
+.c-aboutmobile {
     $ABOUT_HEIGHT: 60em;
     $SUBHEIGHT: $ABOUT_HEIGHT - 18em;
 
@@ -10,20 +10,8 @@
     align-items: center;
     position: relative;
 
-    @media #{$desktop} {
-        height: $ABOUT_HEIGHT;
-    }
-
-    @media #{$laptop} {
-        height: $ABOUT_HEIGHT - 10em;
-    }
-
-    @media #{$tablet} {
-        height: $ABOUT_HEIGHT;
-    }
-
-    @media #{$mobile} {
-        flex-direction: column;
+    @media #{$notMobile} {
+        display: none;
     }
 
     &__dot {
@@ -283,9 +271,9 @@
 }
 
 // Modifier
-.c-about--reveal {
+.c-aboutmobile--reveal {
 
-    .c-about {  //NAMESPACE
+    .c-aboutmobile {  //NAMESPACE
         &__background2Active {
             width: 100%;
         }

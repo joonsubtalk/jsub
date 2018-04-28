@@ -1,3 +1,25 @@
+Get Started ->
+1. What's your name?
+Awesome! [NAME], what type of project are you interested in?
+
+1. Help with javascript
+2. Personal Website
+3. Wedding
+
+How soon
+[ This month ] [ 3 Months ]
+
+Budget
+[ < $1000] [ $1000 - $5000 ] [ > $5,000]
+
+Great! All I need from you now is an email to send you more info [ ... ]
+
+Loading...
+
+Sent! I will usually respond in 24 hours. While you're waiting... why not look thru my journals.
+
+
+
 Game
 Learn Web programming
 

@@ -7,7 +7,6 @@ class Footer extends Component{
 
     render() {
 
-        const {clickHandler} = this.props;
         const year = (new Date()).getFullYear();
         const {github, linkedin, email} = info.footerSocial;
         const {wiseTitle} = info.footerWisdom;
@@ -18,13 +17,13 @@ class Footer extends Component{
                     <div className="o-footer__container">
                         <div className="o-footer__partingWisdom">
                             <div className="o-footer__cta">{wiseTitle}</div>
-                            <div className="o-footer__text">Joon is a frontend developer currently making great sites at (MT) Media Temple.</div>
+                            <div className="o-footer__text">Joon is a frontend developer making awesome sites at (MT) Media Temple.</div>
                             <div className="o-footer__text">He's always looking for exciting work and awesome opportunities.</div>
                         </div>
                         <div className="o-footer__social">
                             <div className="o-footer__write">
                                 <div className="o-footer__cta">I Journal.</div>
-                                <div className="o-footer__text">Ramblings from a coder.</div>
+                                <div className="o-footer__text">Ramblings from a coder. You've been warned!</div>
                             </div>
                             <div className="o-footer__connect">
                                 <div className="o-footer__socialHeader">Let's Connect!</div>

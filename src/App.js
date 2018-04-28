@@ -36,9 +36,9 @@ class App extends Component {
 					blurb={aboutBlurb}
 					pic={profilepic} />
 				<Portfolio />
-				<CallToAction />
+				<CallToAction clickHandler={this.secretClickHandler} />
 				<Statistics shouldOpen={this.state.openStatistics} />
-				<Footer clickHandler={this.secretClickHandler}/>
+				<Footer/>
 			</div>
 		);
 	}

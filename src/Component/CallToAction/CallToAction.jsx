@@ -2,7 +2,9 @@ import React from 'react';
 import { info } from '../../configs/info.js';
 
 const CallToAction = ( props ) => {
+
     const { title, subText, ctaText } = info.callToAction;
+    const {clickHandler} = props;
 
     return (
         <section className="o-callToAction u-baseSpacing">
@@ -14,7 +16,7 @@ const CallToAction = ( props ) => {
                     <div className="o-callToAction__featuredDescriptionContainer">
                         <h3 className="o-callToAction__title">{ title }</h3>
                         <p className="o-callToAction__subtext">{ subText }</p>
-                        <button className="o-callToAction__cta">{ ctaText }</button>
+                        <button onClick={clickHandler} className="o-callToAction__cta">{ ctaText }</button>
                     </div>
                 </div>
             </div>

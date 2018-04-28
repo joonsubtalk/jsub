@@ -22,8 +22,8 @@ class SimpleWork extends Component {
                     <div className="c-simplework__title">
                         {title}
                     </div>
-                    <div className="c-simplework__accolades">
-                        { years && <div className="c-simplework__years">{ years }</div> }
+                    <div className="c-simplework__description">
+                        {description}
                     </div>
                 </div>
             </div>

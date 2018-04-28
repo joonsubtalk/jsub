@@ -1,15 +1,15 @@
 .c-statistics {
     background-image: linear-gradient( #fcf3f4, #ced3e7);
     height: 0em;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 700;
     overflow: hidden;
     transition: all ease 1s;
 
     &__container {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
         padding: 4em 1em;
     }
 
@@ -17,15 +17,27 @@
         height: 10em;
         padding: 1em;
         background-color: #fff;
-        border-right: 2em solid #0077d6;
+        border-top: 4px solid $PRIMARY;
         box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     }
 
     &__stat {
+        font-size: 2em;
+        font-family: 'Roboto Condensed', sans-serif;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    &__header {
         font-size: 3em;
+        margin: 0;
+    }
+
+    &__period {
+        color: $PRIMARY;
     }
 
     &--isActive {
-        height: 46em;
+        height: 26em;
     }
 }

@@ -68,7 +68,7 @@ export const info = {
     callToAction : {
         title : 'Ready to take the next step?',
         subText : 'You have an awesome idea — I want to help you achieve it!',
-        ctaText : 'Get Quote'
+        ctaText : 'Yes, I\'m ready!'
     },
     footerSocial : {
         github : 'https://github.com/joonsubtalk',

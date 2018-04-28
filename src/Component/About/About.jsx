@@ -23,7 +23,7 @@ class About extends Component {
 		const { reveal } = this.state;
 
 		return (
-			<section className={`c-about ${reveal ? 'c-about--reveal' : ''}`}>
+			<section onMouseEnter={this.clickHandler} onMouseLeave={this.clickHandler}  className={`c-about ${reveal ? 'c-about--reveal' : ''}`}>
 				<div className="c-about__background">
 					<div className="c-about__background1"></div>
 					<div className="c-about__background2">
@@ -33,7 +33,7 @@ class About extends Component {
 						<div className="c-about__background3Active"></div>
 					</div>
 				</div>
-				<div onMouseEnter={this.clickHandler} onMouseLeave={this.clickHandler} className="c-about__container">
+				<div className="c-about__container">
 					<div className="c-about__header">About Me</div>
 					<button className="c-about__readmore">Read Journals</button>
 					<div className="c-about__content">

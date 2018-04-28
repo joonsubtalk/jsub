@@ -103,11 +103,22 @@
     &__bgimage {
         display: block;
         position: absolute;
-        width: 30em;
-        right: 5%;
-        top: -1em;
+        right: -40%;
+        bottom: -7em;
+        @media #{$laptop} {
+            right: -60%;
+            bottom: -7em;
+        }
+        @media #{$tablet} {
+            width: 140em;
+            right: -127%;
+            bottom: -15em;
+        }
         @media #{$mobile} {
-            opacity: 0.3;
+            opacity: 0.9;
+            width: 80em;
+            right: -100%;
+            bottom: -4.7em;
         }
     }
 

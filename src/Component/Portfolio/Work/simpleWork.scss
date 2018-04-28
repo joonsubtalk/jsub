@@ -20,7 +20,7 @@
     opacity: .4;
     //will-change: transform, opacity, box-shadow, border-radius;
     transition: all ease .5s;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
 
     @media #{$aboveTablet} {
@@ -62,7 +62,7 @@
             min-height: 5em;
             background-color: #fff;
             font-family: 'Muli', sans-serif;
-            bottom: -18em;
+            bottom: -16em;
         }
     }
 

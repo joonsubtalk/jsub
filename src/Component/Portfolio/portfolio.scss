@@ -81,7 +81,7 @@
     &__pullup {
         position: absolute;
         width: 100%;
-        height: 0;
+        height: 25px;
         bottom: 0;
         transition: all ease .5s;
     }
@@ -103,6 +103,9 @@
         padding: 1em;
         position: relative;
         bottom: -1em;
+        left: 50%;
+        transform: translate(-50%);
+        transition: left ease .5s, transform ease .5s;
     }
     &__summary {
         font-family: 'Muli', sans-serif;
@@ -119,56 +122,47 @@
         min-height: 7em;
         transition: opacity ease-out .5s;
     }
+    &__learnMore {
+        position: absolute;
+        color: $PRIMARY;
+        bottom: -9.6em;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        opacity: 1;
+        border: 1px solid $PRIMARY;
+        border-radius: 5px;
+        transition: opacity ease .5s;
+        font-weight: 400;
+        padding: 1em;
+    }
+    &__action {
+        display: flex;
+        justify-content: flex-end;
+        padding: 1em;
+    }
     &__link {
         color: $PRIMARY;
         text-decoration: none;
         margin: 0;
         padding: 1em;
         min-height: 3em;
-        text-align: center;
-        display: block;
-        position: relative;
     }
     &__icon {
-        top: 0.25em;
+        top: 0.15em;
         width: .75em;
         position: relative;
-        right: 0.2em;
+        right: -0.4em;
         fill: $PRIMARY;
     }
     & p {
         font-weight: 400;
     }
 
-    &__swipeIcon {
-        top: 0.25em;
-        width: 2.5em;
-        height: 2.5em;
-        padding: 2em;
-        opacity: .8;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-20%);
-        z-index: 10000;
-        background-color: white;
-        border-radius: 50%;
-        animation: swappa 2s ease infinite;
-        transition: left ease .5s, opacity ease .2s;
-
-        @media #{$aboveTablet} {
-            display: none;
-        }
-    }
-
 }
 
 .c-portfolio--hasActioned {
 
-    .c-portfolio__swipeIcon {
-        opacity: 0;
-        display: none;
-    }
+    // potential
 
 }
 
@@ -190,6 +184,16 @@
             margin: 0;
             padding: 1em;
             opacity: 1;
+        }
+
+        &__profession {
+            left: 0;
+            transform: none;
+        }
+
+        &__learnMore {
+            opacity: 0;
+            transition: none;
         }
     }
 
@@ -214,23 +218,10 @@
         }
 
     }
-}
 
-
-@keyframes swappa {
-    0% {
-        left: 50%;
-    }
-
-    49% {
-        left: 35%;
-    }
-
-    50% {
-        left: 50%;
-    }
-
-    100% {
-        left: 65%;
+    .c-portfolio {
+        &__learnMore {
+            transition-delay: .7s;
+        }
     }
 }

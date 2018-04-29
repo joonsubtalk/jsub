@@ -1,0 +1,200 @@
+@import 'configs/shared.scss';
+
+.c-contact {
+    background-image: linear-gradient( #fcf3f4, #ced3e7);
+    height: 0em;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    transition: all ease 1s;
+
+    &__container {
+        display: flex;
+        padding: 3em 1em;
+
+        @media #{$mobile} {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__info {
+        padding: 1em;
+        background-color: $COLOR_FROST;
+        border-bottom: 4px solid $COLOR_BLUE;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        @media #{$notMobile} {
+            border: none;
+            padding: 2em;
+            display: block;
+            width: 27em;
+        }
+    }
+    &__guide {
+        padding: 2em;
+        background-color: #fff;
+        //border-top: 4px solid $PRIMARY;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        @media #{$notMobile} {
+            width: 100%;
+        }
+    }
+
+    &__formalities {
+        font-size: 2em;
+        font-family: 'Roboto Condensed', sans-serif;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 1em;
+    }
+
+    &__prompt {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.15em;
+    }
+
+    &__inputText{
+        padding: .5em;
+        border-radius: 0;
+        margin-bottom: 1em;
+    }
+    
+    &__next {
+        color: $PRIMARY;
+        border: 1px solid $PRIMARY;
+        padding: .6em;
+        border-radius: 5px;
+        margin-left: 1em;
+        background-color: $COLOR_WHITE;
+        cursor: pointer;
+        outline: none;
+    }
+
+    &__assurance {
+        font-size: 1.5em;
+        font-family: 'Roboto Condensed', sans-serif;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        border-left: 4px solid $PRIMARY;
+        padding-left: .5em;
+    }
+
+    &__subtitle {
+        color: $COLOR_LIGHTGRAPHITE;
+        font-family: 'Muli', sans-serif;
+        text-align: right;
+    }
+
+    &__header {
+        font-size: 3em;
+        margin: 0;
+    }
+
+    &__period {
+        color: $PRIMARY;
+    }
+
+    &--isActive {
+        height: 35em;
+        padding: 3em 0;
+    }
+
+    &__list {
+        color: $COLOR_LIGHTGRAPHITE;
+        font-family: 'Muli', sans-serif;
+        padding-left: 1em;
+        margin-bottom: 2em;
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        @media #{$notMobile} {
+            border: none;
+            padding: 2em;
+            display: block;
+        }
+    }
+
+    &__list > li{
+        margin-bottom: .5em;
+    }
+
+    &__success {
+        border-left: 4px solid green;
+        font-family: 'Muli', sans-serif;
+        padding: 1em;
+        display: none;
+    }
+
+    &__form {
+        font-family: 'Muli', sans-serif;
+    }
+    &__label {
+
+    }
+    &__nameVerify {
+        opacity: 0;
+        transition: opacity ease .5s;
+    }
+    &__prompt {
+        margin-bottom: .7em;
+        line-height: 1.4;
+    }
+    &__step1 {
+        display: none;
+    }
+    &__step2 {
+        display: none;
+    }
+    &__step3 {
+        display: none;
+    }
+    &__projects {
+        display: flex;
+        flex-direction: column;
+    }
+    &__project {
+        border-radius: 5px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.16), 0 1px 3px rgba(0,0,0,0.23);
+        padding: 1em;
+        cursor: pointer;
+        margin-bottom: 1em;
+        border: none;
+        text-align: left;
+        background-color: $COLOR_WHITE;
+        &:hover {
+            background-color: $PRIMARY;
+            color: $COLOR_WHITE;
+        }
+    }
+    &__submit {
+        border-radius: 25px;
+        background-color: #FFFFFF;
+        color: $PRIMARY;
+        border: 1px solid $PRIMARY;
+        outline: none;
+        padding: .5em;
+        cursor: pointer;
+        text-transform: capitalize;
+
+        &:hover {
+            color: #FFFFFF;
+            background-color: $PRIMARY;
+        }
+    }
+}
+
+.c-contact--reveal {
+    &.c-contact {
+        &__nameVerify {
+            opacity: 1;
+        }
+        &__step1 {
+            display: block;
+        }
+        &__step2 {
+            display: block;
+        }
+        &__step3 {
+            display: block;
+        }
+    }
+}

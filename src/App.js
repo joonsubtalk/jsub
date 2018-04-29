@@ -8,17 +8,17 @@ import CallToAction from './Component/CallToAction/CallToAction';
 import { info } from './configs/info.js';
 import Debugger from './Component/Debugger/Debugger';
 import profilepic from './images/snow.jpg';
-import Statistics from './Component/Statistics/Statistics';
+import Contact from './Component/Contact/Contact';
 
 class App extends Component {
 
 	state = {
-		openStatistics : false
+		openContact : false
 	}
 
 	secretClickHandler = (evt) => {
 		evt.preventDefault();
-		this.setState({ openStatistics : true });
+		this.setState({ openContact : true });
 	}
 
 	render() {
@@ -37,7 +37,7 @@ class App extends Component {
 					pic={profilepic} />
 				<Portfolio />
 				<CallToAction clickHandler={this.secretClickHandler} />
-				<Statistics shouldOpen={this.state.openStatistics} />
+				<Contact shouldOpen={this.state.openContact} />
 				<Footer/>
 			</div>
 		);

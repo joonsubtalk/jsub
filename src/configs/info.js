@@ -1,7 +1,7 @@
 export const info = {
     aboutBlurb : 'I\'m a Frontend Developer with over 5 years of user-centric web application development experience.',
     aboutDescription : [
-        'I graduated with a Computer Science degree at California State University Northridge, and pursued a graduate studies at University of California Los Angeles with an emphasis in mobile technologies in Computer Science.',
+        'I graduated with a Computer Science degree at California State University Northridge, and pursued a M.S. at University of California Los Angeles in Computer Science.',
         'After a few years living in the Bay and beautifying Zazzle.com as a UI developer, I\'m back in Los Angeles working at MediaTemple as a frontend developer.'
     ],
     portfolio : {
@@ -42,7 +42,7 @@ export const info = {
                 image : 'image/zazzle-sm.jpg',
                 years : 2,
                 description : [
-                    'Created landing pages Zazzle Maker, Heart, and Women\'s tank top promo and product offerings. Developed the webhook interface for Zazzle\'s native app.'
+                    'Created landing pages for Zazzle Maker, Heart, and Women\'s tank top promo and product offerings. Developed the webhook interface for Zazzle\'s native app.'
                 ]
             },
             { 

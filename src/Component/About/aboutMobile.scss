@@ -142,7 +142,7 @@
     &__description {
         width: 27em;
         height: 0;
-        color: #484848;// TODO ::
+        color: $COLOR_SUBTLE;
         line-height: 1.5;
         overflow: hidden;
         transition: all ease .5s;

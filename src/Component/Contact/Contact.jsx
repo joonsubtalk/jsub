@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Loader from '../Loader/Loader';
 
 class Contact extends Component {
 
@@ -10,6 +11,43 @@ class Contact extends Component {
         sent : false,
         typingName : () => {},
         step : 1
+    }
+
+    submitHandler = (evt) => {
+
+        const errorMessage = this.validateEmail();
+
+        if (errorMessage !== '')
+            return errorMessage;
+
+        const url = `${process.env.PUBLIC_URL}/php/email.php`;
+        const { clientEmail, clientName } = this.state;
+        this.setState({busy : true});
+
+        evt.preventDefault();
+
+        let data = {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                type : 'inquiry',
+                clientName : clientName,
+                clientEmail : clientEmail
+            })
+        }
+
+        fetch(url, data)
+        .then((responseJson) => {
+            this.setState({sent : true, busy: false});
+            console.log(responseJson);
+        })
+        .catch((error) => {
+            this.setState({sent : false, busy: false});
+            console.log(error);
+        });
     }
 
     changeHandler = (evt) => {
@@ -62,8 +100,8 @@ class Contact extends Component {
             case 1 :
                 errorMessage = this.validateName();
                 break;
-            case 3 :
-                errorMessage = this.validateEmail();
+            case 2 :
+                this.setState({typeOfProject : typeOfProject});
                 break;
         }
 
@@ -122,13 +160,13 @@ class Contact extends Component {
                                     <div className="c-contact__prompt">Sweet! <br />
                                     { clientName }, what type of project are you interested in?</div>
                                     <div className="c-contact__projects">
-                                        <button onClick={this.nextHandler} className="c-contact__project">
+                                        <button onClick={this.nextHandler} className="c-contact__project" data-id="1">
                                             Presonal Website
                                         </button>
-                                        <button onClick={this.nextHandler} className="c-contact__project">
+                                        <button onClick={this.nextHandler} className="c-contact__project" data-id="2">
                                             Business / Company Website
                                         </button>
-                                        <button onClick={this.nextHandler} className="c-contact__project">
+                                        <button onClick={this.nextHandler} className="c-contact__project" data-id="3">
                                             App Idea
                                         </button>
                                     </div>
@@ -141,7 +179,11 @@ class Contact extends Component {
                                     </label>
                                     {clientEmail}
                                     <br />
-                                    <button onClick={this.nextHandler} className="c-contact__submit">{renderSubmitLabel}</button>
+                                    <button onClick={this.submitHandler} className="c-contact__submit">{renderSubmitLabel}</button>
+                                </div>
+
+                                <div className={`c-contact__step4 ${step === 4 ? 'c-contact--reveal' : '' }`}>
+                                    <Loader />
                                 </div>
                             </form>
                         </div>

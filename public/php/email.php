@@ -8,27 +8,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $POSTED = $obj;
 }
 
-$fullName = $POSTED['fname'] . ' ' . $POSTED['lname'];
-
 // Recipient email
-$toEmail = 'michael@coramrealty.com';
-$emailSubject = ' submitted by '.$fullName;
+$toEmail = 'joonsubtalk@gmail.com';
+$emailSubject = ' submitted by '.$POSTED['clientName'];
 
-if ($POSTED['type'] == 'buy') {
-    $emailSubject = '[BUY REQ]' . $emailSubject;
+if ($POSTED['type'] == 'inquiry') {
+    $emailSubject = '[Site Inquiry]' . $emailSubject;
     $htmlContent = '<h2>Contact Request Submitted</h2>
-    <h4>property: </h4>'.$POSTED['property'].'</p>
-    <h4>city: </h4>'.$POSTED['city'].'</p>
-    <h4>price: </h4>'.$POSTED['price'].'</p>
-    <h4>bedroom: </h4>'.$POSTED['bedroom'].'</p>
-    <h4>bathroom: </h4>'.$POSTED['bathroom'].'</p>
-    <h4>features: </h4>'.$POSTED['features'].'</p>
-    <h4>fname: </h4>'.$POSTED['fname'].'</p>
-    <h4>lname: </h4>'.$POSTED['lname'].'</p>
-    <h4>email: </h4>'.$POSTED['email'].'</p>
-    <h4>phone: </h4>'.$POSTED['phone'].'</p>
-    <h4>timeframe: </h4>'.$POSTED['timeframe'].'</p>
-    <h4>reason: </h4>'.$POSTED['reason'].'</p>';
+    <h4>Name: </h4>'.$POSTED['clientName'].'</p>
+    <h4>typeOfProject: </h4>'.$POSTED['typeOfProject'].'<br />
+    <h4>clientEmail: </h4>'.$POSTED['clientEmail'].'<br />';
 }
 elseif ($POSTED['type'] == 'started') {
     $toEmail = 'info@coramdesigncenter.com';
@@ -76,15 +65,13 @@ $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
 // Additional headers
-$headers .= 'From: '.$fullName.'<' . $POSTED['email'] .'>'. "\r\n";
+$headers .= 'From: '.$POSTED['clientName'].'<' . $POSTED['clientEmail'] .'>'. "\r\n";
 
 // Send email
 if(mail($toEmail,$emailSubject,$htmlContent,$headers)){
-    $statusMsg = 'Your contact request has been submitted successfully !';
-    $msgClass = 'succdiv';
+    $statusMsg = 1;
 }else{
-    $statusMsg = 'Your contact request submission failed, please try again.';
-    $msgClass = 'errordiv';
+    $statusMsg = 0;
 }
 
 echo $statusMsg;

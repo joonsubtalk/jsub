@@ -17,7 +17,10 @@ class App extends Component {
 	}
 
 	secretClickHandler = (evt) => {
-		evt.preventDefault();
+
+		if (evt) {
+			evt.preventDefault();
+		}
 		this.setState({ openContact : true });
 	}
 
@@ -28,7 +31,7 @@ class App extends Component {
 		return (
 			<div>
 				<Debugger />
-				<Header/>
+				<Header clickHandler={this.secretClickHandler} />
 				<About description={aboutDescription}
 					blurb={aboutBlurb}
 					pic={profilepic} />

@@ -85,7 +85,7 @@
 
     &__header {
         font-size: 3em;
-        margin: 0;
+        margin: 0 0 0 1rem;
     }
 
     &__period {
@@ -95,6 +95,13 @@
     &--isActive {
         height: 35em;
         padding: 3em 0;
+
+        @media #{$tablet} {
+            height: 100%;
+        }
+        @media #{$mobile} {
+            height: 100%;
+        }
     }
 
     &__list {
@@ -126,6 +133,7 @@
 
     &__form {
         font-family: 'Muli', sans-serif;
+        display: none;
     }
     &__label {
 
@@ -200,6 +208,12 @@
             display: block;
         }
         &__step4 {
+            display: block;
+        }
+        &__success {
+            display: block;
+        }
+        &__form {
             display: block;
         }
     }

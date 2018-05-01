@@ -5,17 +5,9 @@ import scope from '../../images/scope.jpg';
 
 class Header extends Component {
 
-    multipleClickHandler = () => {
-        this.scrollToContactHandler();
-    }
-
     scrollToContactHandler = () => {
-
-        const {clickHandler} = this.props;
-
-        clickHandler();
         setTimeout( () => {
-            var elem = document.querySelector('.js-contact-bot');
+            var elem = document.querySelector('.js-work');
             scrollToElement(elem, {
                 offset: 0,
                 ease: 'outQuad',
@@ -32,8 +24,8 @@ class Header extends Component {
                     <div className="o-header__aligner">
                         <div className="o-header__content">
                             <div className="o-header__mark">Make your next move</div>
-                            <div className="o-header__subtext">I'm an agile frontend developer with a strong design skillset</div>
-                            <button onClick={this.multipleClickHandler} className="o-header__cta">Contact Joon</button>
+                            <div className="o-header__subtext">I develop quality code and performant designs.</div>
+                            <button onClick={this.scrollToContactHandler} className="o-header__cta">View Works</button>
                         </div>
                     </div>
                     <img className="o-header__bgimage" src={scope} alt="no scope" />

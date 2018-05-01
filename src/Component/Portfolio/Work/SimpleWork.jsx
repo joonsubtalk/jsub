@@ -6,8 +6,8 @@ class SimpleWork extends Component {
     }
 
     render() {
-        const {image, id, link} = this.props;
-        const { job, title, description, years } = this.props.work;
+        const {image, id } = this.props;
+        const { job, title, description } = this.props.work;
         // Use placeholder if no image
         const imgSrc = (image && `${process.env.PUBLIC_URL}/${image}`) || 'http://via.placeholder.com/636x398' ;
         const classnameModifier = `c-simplework__item-${id+1}`;

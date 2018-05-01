@@ -146,7 +146,7 @@ class Portfolio extends Component {
         return (
         <Hammer onTap={this.clickHandler}
             onSwipe={this.swipeHandler}>
-            <section className={`c-portfolio ${isActiveHighlighted ? 'c-portfolio--active' : ''} ${hasActioned ? 'c-portfolio--hasActioned' : ''}`}>
+            <section className={`c-portfolio js-work ${isActiveHighlighted ? 'c-portfolio--active' : ''} ${hasActioned ? 'c-portfolio--hasActioned' : ''}`}>
                 <div className="c-portfolio__content">
                     <div className="c-portfolio__header">
                         <h2 className="c-portfolio__title">Work<span className="c-portfolio__dot">.</span></h2>

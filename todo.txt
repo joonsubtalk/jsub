@@ -46,7 +46,7 @@ About
 Born and raised in Los Angeles, I was fortunate to find my passion early in my life making the web pretty.
 From deisgning flashy advertisements to developing mobile games, my passion eventually found itself in making the web pretty.
 After graduating undergrad, I helped frontier Pathways for CSUN serving 34,000 students discover their career and even helped out as an adjunct professor! 
-After a few years living in the bay as a UI Developer at Zazzle, I've found my way back to my roots in Los Angeles where I currently work as a front end developer at MediaTemple.
+After a few years living in the bay as a UI Developer at Zazzle, I've found my way back to my roots in Los Angeles where I currently work as a front-end developer at MediaTemple.
 
 Education
 CSUN 2009 Computer Science B.S.

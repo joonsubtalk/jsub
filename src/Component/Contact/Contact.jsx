@@ -71,6 +71,7 @@ class Contact extends Component {
             case 3:
                 this.setState({clientEmail : str});
                 break;
+            default:
         }
 
     }
@@ -79,7 +80,7 @@ class Contact extends Component {
         const { clientName } = this.state;
         // name test
         // const rx = new RegExp("[a-zA-Z]");
-        var reg = new RegExp(/[~`!#$%\^&*+=\[\]\\';,/{}|\\":<>\?]/);
+        var reg = new RegExp(/[~`!#$%^&*+=[\]\\';,/{}|\\":<>?]/);
         if (clientName.length <= 1)
             return 'Name should be longer';
         else if (reg.test(clientName))
@@ -91,7 +92,7 @@ class Contact extends Component {
     validateEmail = () => {
         const { clientEmail } = this.state;
         // name test
-        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         if (clientEmail.length <= 2)
             return 'Email should be longer';
         else if (!re.test(String(clientEmail).toLowerCase()))
@@ -112,6 +113,8 @@ class Contact extends Component {
             case 2 :
                 this.setState({typeOfProject : evt.target.getAttribute('data-id')});
                 break;
+            default:
+                break;
         }
 
         if (errorMessage !== '') {
@@ -126,7 +129,7 @@ class Contact extends Component {
     render() {
 
         const { shouldOpen } = this.props;
-        const { clientName, clientEmail, step, submit, sent, busy }  = this.state;
+        const { clientName, step, submit, sent, busy }  = this.state;
 
         const renderSubmitLabel = submit ? ( sent ? null : 'Sending...' ) : 'submit';
 
@@ -140,12 +143,12 @@ class Contact extends Component {
                         <div className="c-contact__info">
                             <div className="c-contact__assurance">Performance Guarenteed</div>
                             <ul className="c-contact__list">
-                                <li>Mobile First Design</li>
+                                <li>Mobile-First Development</li>
                                 <li>Modular CSS BEM</li>
-                                <li>Minimized assets</li>
-                                <li>Grid based layout</li>
+                                <li>Minimized Assets</li>
+                                <li>Grid-Based Layout</li>
                                 <li>Linted Javascript</li>
-                                <li>Search Engine Optimized</li>
+                                <li>SEO Ready Design</li>
                                 <li>Broad Browser Support</li>
                                 <li>Google Analytics Setup</li>
                             </ul>
@@ -154,7 +157,7 @@ class Contact extends Component {
                         </div>
                         <div className="c-contact__guide">
                             <div className={`c-contact__success ${sent ? 'c-contact--reveal' : ''}`}>
-                                <strong>Sent!</strong> I will usually respond in 24 hours.<br />While you're waiting... why not look thru my journals.
+                                <strong>Sent!</strong> I will usually respond in 24 hours.<br />While you're waiting... why not look through my journals?
                             </div>
                             <form className={`c-contact__form ${sent ? '' : 'c-contact--reveal'}`}>
                                 <div className="c-contact__formalities">Introductions</div>

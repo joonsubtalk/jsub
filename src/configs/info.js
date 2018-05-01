@@ -1,8 +1,8 @@
 export const info = {
-    aboutBlurb : 'I\'m a Frontend Developer with over 5 years of user-centric web application development experience.',
+    aboutBlurb : 'I\'m a front-end developer with over 5 years of user-centric web application development experience.',
     aboutDescription : [
         'I graduated with a Computer Science degree at California State University Northridge, and pursued a M.S. at University of California Los Angeles in Computer Science.',
-        'After a few years living in the Bay and beautifying Zazzle.com as a UI developer, I\'m back in Los Angeles working at MediaTemple as a frontend developer.'
+        'After a few years living in the Bay and beautifying Zazzle.com as a UI developer, I\'m back in Los Angeles working at MediaTemple as a front-end developer.'
     ],
     portfolio : {
         works : [
@@ -22,17 +22,17 @@ export const info = {
                 link : 'https://www.meatoes.com',
                 image : 'image/minion-sm.jpg',
                 description : [
-                    'Lead game developer for Minion flapjack run. Designed and developed game with entertainment industry.'
+                    'Lead game developer for Minion flapjack run. Worked in a fast-paced entertainment industry to deliver flash game.'
                 ]
             },
             { 
                 job : 'Media Temple',
-                title : 'Frontend Developer',
+                title : 'Front-end Developer',
                 link : 'https://www.mediatemple.net',
                 image : 'image/mediatemple-sm.jpg',
                 years : 1,
                 description : [
-                    'Delivered multiple landing pages for Media Temple\'s promo and product offerings. Actively contributed to ux-core2 React component repos used across multiple companies.'
+                    'Shipped multiple landing pages for Media Temple\'s promo and product offerings. Actively contributed to ux-core2 React library repos used across multiple companies.'
                 ]
             },
             { 
@@ -67,7 +67,7 @@ export const info = {
     },
     callToAction : {
         title : 'Ready to take the next step?',
-        subText : 'You have an awesome idea — I want to help you achieve it!',
+        subText : 'You have an awesome idea — let me help you achieve it!',
         ctaText : 'Yes, I\'m ready!'
     },
     footerSocial : {

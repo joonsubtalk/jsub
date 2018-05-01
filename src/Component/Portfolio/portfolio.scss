@@ -129,11 +129,12 @@
         left: 50%;
         transform: translate(-50%,-50%);
         opacity: 1;
-        border: 1px solid $PRIMARY;
+        border: 2px solid $PRIMARY;
         border-radius: 5px;
         transition: opacity ease .5s;
         font-weight: 400;
-        padding: 1em;
+        padding: .75em;
+        font-family: 'Muli', sans-serif;
     }
     &__action {
         display: flex;

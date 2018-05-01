@@ -161,11 +161,27 @@
         }
     }
 
+    &__resume {
+        position: absolute;
+        width: 10em;
+        height: 40px;
+        top: 81.5%;
+        left: 16em;
+        color: $PRIMARY;
+        outline: none;
+        text-decoration: none; 
+
+        @media #{$tablet} {
+            top: 91.5%;
+            left: 13em;
+        }
+    }
+
     &__teaser {
         width: 27em;
         height: 3em;
         overflow: hidden;
-        color: $COLOR_DARKGRAPHITE;// TODO::
+        color: $COLOR_DARKGRAPHITE;
         line-height: 1.5;
         font-size: 1.1em;
         transition: all ease .5s;

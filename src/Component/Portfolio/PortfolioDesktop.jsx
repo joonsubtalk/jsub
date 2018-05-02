@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import SimpleWork from './Work/SimpleWork';
 
-import { info } from '../../configs/info.js';
-
 class PortfolioDesktop extends Component {
 
     state = {

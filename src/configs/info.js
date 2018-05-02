@@ -10,6 +10,7 @@ export const info = {
                 job : 'COPAKB',
                 title : 'web developer',
                 link : 'http://www.heartproteome.org',
+                bgImage : 'image/copakbBig.jpg',
                 image : 'image/copakb-sm.jpg',
                 years : 1,
                 description : [
@@ -20,6 +21,7 @@ export const info = {
                 job : 'MEATOES',
                 title : 'Freelance - Game developer',
                 link : 'https://www.meatoes.com',
+                bgImage : 'image/minionBig.jpg',
                 image : 'image/minion-sm.jpg',
                 description : [
                     'Lead game developer for Minion flapjack run. Worked in a fast-paced entertainment industry to deliver flash game.'
@@ -29,6 +31,7 @@ export const info = {
                 job : 'Media Temple',
                 title : 'Front-end Developer',
                 link : 'https://www.mediatemple.net',
+                bgImage : 'image/mediatempleBig.jpg',
                 image : 'image/mediatemple-sm.jpg',
                 years : 1,
                 description : [
@@ -39,6 +42,7 @@ export const info = {
                 job : 'Zazzle',
                 title : 'UI Engineer',
                 link : 'https://www.zazzle.com',
+                bgImage : 'image/zazzleBig.jpg',
                 image : 'image/zazzle-sm.jpg',
                 years : 2,
                 description : [
@@ -49,6 +53,7 @@ export const info = {
                 job : 'Coram Design Center',
                 title : 'Freelance - web developer',
                 link : 'http://www.coramdesigncenter.com',
+                bgImage : 'image/designBig.jpg',
                 image : 'image/design-sm.jpg',
                 description : [
                     'Refactored Wordpress site to a React single page webapp. Added Google Analytics and GTM for market awareness.'
@@ -58,6 +63,7 @@ export const info = {
                 job : 'Coram Realty',
                 title : 'Freelance - web developer',
                 link : 'http://www.coramrealty.com',
+                bgImage : 'image/realtyBig.jpg',
                 image : 'image/realty-sm.jpg',
                 description : [
                     'Refactored Wordpress site to a React single page webapp. Added Google Analytics and GTM for market awareness.'

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from './Component/Header/Header';
 import About from './Component/About/About';
 import AboutMobile from './Component/About/AboutMobile';
-import Portfolio from './Component/Portfolio/Portfolio';
+import PortfolioDesktop from './Component/Portfolio/PortfolioDesktop';
 import Footer from './Component/Footer/Footer';
 import CallToAction from './Component/CallToAction/CallToAction';
 import { info } from './configs/info.js';
@@ -38,7 +38,7 @@ class App extends Component {
 				<AboutMobile description={aboutDescription}
 					blurb={aboutBlurb}
 					pic={profilepic} />
-				<Portfolio />
+				<PortfolioDesktop />
 				<CallToAction clickHandler={this.secretClickHandler} />
 				<Contact shouldOpen={this.state.openContact} />
 				<Footer/>

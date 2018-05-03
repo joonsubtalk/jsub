@@ -159,6 +159,10 @@
         font-weight: 400;
     }
 
+    @media #{$notDesktop} {
+        display: none;
+    }
+
 }
 
 .c-portfolio--hasActioned {

@@ -8,21 +8,18 @@
     display: none;
 
     &__container {
-        height: 50em;
-
-        @media #{$laptop} {
-            height: 40em;
-        }
-
-        @media #{$tablet} {
-            height: 40em;
-        }
+        height: 28em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     &__info {
+        width: 30em;
+        padding-top: 7em;
     }
 
-    &__infoContainer {
+    &__fullWidthContainer {
         position: relative;
         width: 100%;
         margin: 0 auto 0;
@@ -51,8 +48,9 @@
     &__header {
         font-size: 3.5em;
         text-transform: uppercase;
+        color: $COLOR_DARKGRAPHITE;
     }
-    &__headersub {
+    &__subheader {
         font-size: 2em;
         color: $COLOR_GRAPHITE;
         margin-bottom: .75em;
@@ -63,6 +61,7 @@
         font-size: 1.25em;
         line-height: 1.5;
         color: $COLOR_LIGHTGRAPHITE;
+        margin-bottom: 1em;
     }
 
     &__bgContainer {
@@ -79,7 +78,7 @@
         width: 100%;
         height: 100%;
         background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 70%,rgba(255,255,255,1) 75%);
-        background: linear-gradient(to left,  rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 40%, rgba(255,255,255, 1) 70%);
+        background: linear-gradient(to right,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 40%, rgba(255,255,255, .1) 70%);
     }
 
 
@@ -89,16 +88,12 @@
     }
 
     &__workContainer {
-        position: relative;
-        bottom: -33em;
+        width: 100%;
+    }
 
-        @media #{$laptop} {
-            bottom: -34em;
-        }
-
-        @media #{$tablet} {
-            bottom: -34em;
-        }
+    &__learnMore {
+        color: $PRIMARY;
+        text-decoration: none;
     }
 
     @media #{$aboveTablet} {

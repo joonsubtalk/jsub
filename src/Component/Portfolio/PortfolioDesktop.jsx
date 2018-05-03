@@ -17,24 +17,25 @@ class PortfolioDesktop extends Component {
 
         const { workList } = this.state;
         const active = workList && workList.length > 1 ? workList[2] : '';
-        const bgStyle = { background : `url(${active.bgImage}) no-repeat center center` }
+        const bgStyle = { background : `url(${active.bgImage}) no-repeat top right` }
 
         return (
             <section className="c-portfolioDesktop">
-                <div className="c-portfolioDesktop__infoContainer">
+                <div className="c-portfolioDesktop__fullWidthContainer">
                     <div className="c-portfolioDesktop__info">
                         <div className="c-portfolioDesktop__header">{active.job}</div>
-                        <div className="c-portfolioDesktop__headersub">{active.title}</div>
+                        <div className="c-portfolioDesktop__subheader">{active.title}</div>
                         <div className="c-portfolioDesktop__description">{active.description}</div>
+                        <div><a className="c-portfolioDesktop__learnMore" href={active.link}>{active.job}</a></div>
                     </div>
                 </div>
-                <div className="c-portfolioDesktop__container container">
+                <div className="c-portfolioDesktop__container c-portfolioDesktop__fullWidthContainer">
                     <div className="c-portfolioDesktop__workContainer">
-                        <div>Works</div>
+                        <div className="c-portfolioDesktop__subheader">Works</div>
                         <div className="c-portfolioDesktop__works">
 
-                        { workList.map((work) => { 
-                            return <SimpleWork work={work} /> 
+                        { workList.map((work, idx) => { 
+                            return <SimpleWork work={work} key={idx} /> 
                             })
                         }
                         </div>

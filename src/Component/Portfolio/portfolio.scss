@@ -159,7 +159,7 @@
         font-weight: 400;
     }
 
-    @media #{$notDesktop} {
+    @media #{$aboveTablet} {
         display: none;
     }
 

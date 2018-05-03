@@ -149,7 +149,7 @@ class Portfolio extends Component {
             <section className={`c-portfolio js-work ${isActiveHighlighted ? 'c-portfolio--active' : ''} ${hasActioned ? 'c-portfolio--hasActioned' : ''}`}>
                 <div className="c-portfolio__content">
                     <div className="c-portfolio__header">
-                        <h2 className="c-portfolio__title">Work<span className="c-portfolio__dot">.</span></h2>
+                        <h2 className="c-portfolio__title">Works<span className="c-portfolio__dot">.</span></h2>
                     </div>
                     <div className="c-portfolio__container--mobile">
                         { this.renderWorks(workList) }

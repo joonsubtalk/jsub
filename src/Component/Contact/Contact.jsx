@@ -164,7 +164,7 @@ class Contact extends Component {
                                 <div className={`c-contact__step1 ${step === 1 ? 'c-contact--reveal' : '' }`}>
                                     <label className="c-contact__label" htmlFor="clientName">
                                         <div className="c-contact__prompt">Great! What's your name?</div>
-                                        <input onChange={this.changeHandler} className="c-contact__inputText js-clientName" type="text" id="clientName" name="clientName" placeholder="name" autoComplete="off"/>
+                                        <input onChange={this.changeHandler} className="c-contact__inputText js-clientName" type="text" id="clientName" name="clientName" placeholder="Name" autoComplete="off"/>
                                     </label>
                                     <div className={`c-contact__nameVerify ${clientName.length > 1 ? 'c-contact--reveal' : ''}`}>Is your name, <strong>{clientName}</strong>? <button onClick={this.nextHandler} className="c-contact__next">Yep!</button></div>
                                 </div>

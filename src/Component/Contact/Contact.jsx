@@ -179,7 +179,7 @@ class Contact extends Component {
                                             Business / Company Website
                                         </button>
                                         <button onClick={this.nextHandler} className="c-contact__project" data-id="3">
-                                            App Idea
+                                            WebApp Idea
                                         </button>
                                         <button onClick={this.nextHandler} className="c-contact__project" data-id="4">
                                             Actually, I'm referring a friend...

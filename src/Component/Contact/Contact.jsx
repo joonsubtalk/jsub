@@ -181,11 +181,14 @@ class Contact extends Component {
                                         <button onClick={this.nextHandler} className="c-contact__project" data-id="3">
                                             App Idea
                                         </button>
+                                        <button onClick={this.nextHandler} className="c-contact__project" data-id="4">
+                                            Actually, I'm referring a friend...
+                                        </button>
                                     </div>
                                 </div>
 
                                 <div className={`c-contact__step3 ${step === 3 ? 'c-contact--reveal' : '' }`}>
-                                    <div className="c-contact__prompt">Awesome! Now, which email should the quote be sent to?</div>
+                                    <div className="c-contact__prompt">Awesome! What's the best email to reach you?</div>
                                     <label className="c-contact__label" htmlFor="clientEmail">
                                         <input onChange={this.changeHandler} className="c-contact__inputText js-clientEmail" type="email" id="clientEmail" name="clientEmail" placeholder="email" />
                                     </label>

@@ -35,7 +35,7 @@ class About extends Component {
 				</div>
 				<div className="c-about__container">
 					<div className="c-about__header">About Me</div>
-					<button className="c-about__readmore">Read Journals</button> <a href={`${process.env.PUBLIC_URL}/download/2018_Q2_CHUNG_RESUME.pdf`} target="_blank" className="c-about__resume">View Resume</a>
+					<a href={`${process.env.PUBLIC_URL}/download/2018_Q2_CHUNG_RESUME.pdf`} target="_blank" className="c-about__resume">View Resume</a>
 					<div className="c-about__content">
 						<div className="c-about__card">
 							<div className="c-about__text">

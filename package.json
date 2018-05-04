@@ -17,7 +17,7 @@
   "devDependencies": {
     "react-scripts": "1.1.1"
   },
-  "homepage": "https://joonsub.com/wip",
+  "homepage": "https://joonsub.com",
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",

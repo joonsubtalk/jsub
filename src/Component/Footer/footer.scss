@@ -15,6 +15,15 @@
             fill: $COLOR_WHITE;
         }
     }
+    &__link:active,
+    &__link:focus,
+    &__link {
+        color: darken($COLOR_WHITE, 25);
+        text-decoration: none;
+    }
+    &__link:hover {
+        text-decoration: underline;
+    }
     &__legal {
         text-align: center;
         color: lighten($FOOTER_BACKGROUND,50);

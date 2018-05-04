@@ -22,8 +22,8 @@ class Footer extends Component{
                         </div>
                         <div className="o-footer__social">
                             <div className="o-footer__write">
-                                <div className="o-footer__cta">I Journal.</div>
-                                <div className="o-footer__text">Ramblings and rants of a coder. Read them here.</div>
+                                <div className="o-footer__cta">Sharing is caring.</div>
+                                <div className="o-footer__text">Earn a referral bonus for every valid <a className="o-footer__link" href="https://www.joonsub.com/referral.html">project<sup>*</sup></a>. It's a win for everyone!</div>
                             </div>
                             <div className="o-footer__connect">
                                 <div className="o-footer__socialHeader">Let's Connect!</div>

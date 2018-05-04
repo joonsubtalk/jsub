@@ -7,7 +7,7 @@ import Portfolio from './Component/Portfolio/Portfolio';
 import Footer from './Component/Footer/Footer';
 import CallToAction from './Component/CallToAction/CallToAction';
 import { info } from './configs/info.js';
-import Debugger from './Component/Debugger/Debugger';
+// import Debugger from './Component/Debugger/Debugger';
 import profilepic from './images/snow.jpg';
 import Contact from './Component/Contact/Contact';
 
@@ -31,14 +31,14 @@ class App extends Component {
 
 		return (
 			<div>
-				<Debugger />
+				{/* <Debugger /> */}
 				<Header clickHandler={this.secretClickHandler} />
 				<About description={aboutDescription}
 					blurb={aboutBlurb}
 					pic={profilepic} />
 				<AboutMobile description={aboutDescription}
-					blurb={aboutBlurb}
-					pic={profilepic} />
+					blurb={aboutBlurb} />
+				<div className="js-work"></div>
 				<PortfolioDesktop />
 				<Portfolio />
 				<CallToAction clickHandler={this.secretClickHandler} />

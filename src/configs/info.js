@@ -7,14 +7,14 @@ export const info = {
     portfolio : {
         works : [
             { 
-                job : 'COPAKB',
-                title : 'web developer',
-                link : 'http://www.heartproteome.org',
-                bgImage : 'image/copakbBig.jpg',
-                image : 'image/copakb-sm.jpg',
+                job : 'UCLA',
+                title : 'Google Glass Developer',
+                link : 'http://newsroom.ucla.edu/stories/an-eye-on-the-future-of-storytelling',
+                bgImage : 'image/uclaBig.jpg',
+                image : 'image/ucla.jpg',
                 years : 1,
                 description : [
-                    'Refactored UI for main C# web application. Extended mass spectra data viewer with D3.js and Lorikeet.js.'
+                    'Created Google Glass UI for UCLA film students. Interfaced with Glass API to pull sentiment analyzed Twitter feeds.'
                 ]
             },
             { 

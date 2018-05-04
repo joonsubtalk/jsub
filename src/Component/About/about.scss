@@ -166,14 +166,14 @@
         width: 10em;
         height: 40px;
         top: 81.5%;
-        left: 16em;
+        left: 4em;
         color: $PRIMARY;
         outline: none;
         text-decoration: none; 
 
         @media #{$tablet} {
             top: 91.5%;
-            left: 13em;
+            left: 1em;
         }
     }
 
@@ -235,10 +235,12 @@
     }
     &__background3 {
         background-color: $ABOUT_BACKGROUND3;
+        background-color: $COLOR_STEEL;
     }
 
     &__background2Active {
         background-color: $ABOUT_BACKGROUND3;
+        background-color: $COLOR_STEEL;
         transition: all ease .5s;
         width: 0px;
         height: 100%;
@@ -246,6 +248,7 @@
     &__background3Active {
         background-color: $ABOUT_BACKGROUND2;
         transition: all ease .5s;
+        transition-delay: .25s;
         width: 0px;
         height: 100%;
     }
@@ -262,6 +265,8 @@
             width: 100%;
         }
         &__description {
+            transition: all ease 2s;
+            transition-delay: .75s;
             height: 15em;
         }
         &__image {

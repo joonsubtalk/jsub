@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-
+import pic from '../../images/joon.jpg';
 class About extends Component {
 
 	render() {
 
-		const { pic, blurb } = this.props;
+		const { blurb } = this.props;
 
 		return (
 			<section className="c-aboutmobile u-baseSpacing">

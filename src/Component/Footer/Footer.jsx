@@ -18,7 +18,7 @@ class Footer extends Component{
                         <div className="o-footer__partingWisdom">
                             <div className="o-footer__cta">{wiseTitle}</div>
                             <div className="o-footer__text">Joon is a front-end developer making awesome sites at Media Temple.</div>
-                            <div className="o-footer__text">He's always looking for exciting work and awesome opportunities.</div>
+                            <div className="o-footer__text">He's always looking for exciting work and opportunities.</div>
                         </div>
                         <div className="o-footer__social">
                             <div className="o-footer__write">

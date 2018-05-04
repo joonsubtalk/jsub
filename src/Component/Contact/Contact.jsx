@@ -157,7 +157,7 @@ class Contact extends Component {
                         </div>
                         <div className="c-contact__guide">
                             <div className={`c-contact__success ${sent ? 'c-contact--reveal' : ''}`}>
-                                <strong>Sent!</strong> I will usually respond in 24 hours.<br />While you're waiting... why not look through my journals?
+                                <strong>Sent!</strong> I will usually respond in 24 hours.
                             </div>
                             <form className={`c-contact__form ${sent ? '' : 'c-contact--reveal'}`}>
                                 <div className="c-contact__formalities">Introductions</div>
@@ -173,7 +173,7 @@ class Contact extends Component {
                                     { clientName }, what type of project are you interested in?</div>
                                     <div className="c-contact__projects">
                                         <button onClick={this.nextHandler} className="c-contact__project" data-id="1">
-                                            Presonal Website
+                                            Personal Website
                                         </button>
                                         <button onClick={this.nextHandler} className="c-contact__project" data-id="2">
                                             Business / Company Website

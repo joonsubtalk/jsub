@@ -59,7 +59,7 @@ export const info = {
                     'Refactored Wordpress site to a React single page webapp. Added Google Analytics and GTM for market awareness.'
                 ]
             },
-            { 
+            {
                 job : 'Coram Realty',
                 title : 'Freelance - web developer',
                 link : 'http://www.coramrealty.com',

@@ -8,26 +8,42 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $POSTED = $obj;
 }
 
-require_once('pw.php');
+function clean($string) {
+    $string = str_replace(' ', '-', $string); // Replaces all spaces with hyphens.
+    return preg_replace('/[^A-Za-z0-9\-]/', '', $string); // Removes special chars.
+}
 
-$ta = $POSTED['action'];
-$tl = $POSTED['label'];
-$tv = $POSTED['value'];
+$ta = clean($POSTED['action']);
+$tl = clean($POSTED['label']);
+$tv = clean($POSTED['value']);
+
+// client IPaddress
+if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+    $ip = $_SERVER['HTTP_CLIENT_IP'];
+} elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+    $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+} else {
+    $ip = $_SERVER['REMOTE_ADDR'];
+}
+// convert
+$tip = ip2long($ip);
+
+require_once('./pw.php');
 
 // connect
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-$query = "INSERT INTO Statistics (taction, tlabel, tvalue) VALUES ($ta,$tl,$tv)";
+$mysqli_conn = new mysqli("localhost", $username, $password, $dbname);
+$query = "INSERT INTO Statistics (taction, tlabel, tvalue, tip) VALUES ('$ta','$tl','$tv','$tip')";
 
-// data inserted!
-$data = mysqli_query($conn, $query);
+$result = $mysqli_conn->query($query);
 
 // Send results
-if($data){
+if($result){
     $statusMsg = 1;
 }else{
     $statusMsg = 0;
 }
 
 echo $statusMsg;
+
 
 ?>

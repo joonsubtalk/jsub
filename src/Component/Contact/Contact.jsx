@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Loader from '../Loader/Loader';
+import { sendData } from '../../helpers/utils';
 
 class Contact extends Component {
 
@@ -15,6 +16,7 @@ class Contact extends Component {
 
     submitHandler = (evt) => {
 
+        evt.preventDefault();
         const errorMessage = this.validateEmail();
 
         if (errorMessage !== '')
@@ -24,7 +26,6 @@ class Contact extends Component {
         const { clientEmail, clientName, typeOfProject } = this.state;
         this.setState({busy : true});
 
-        evt.preventDefault();
 
         let data = {
             method: 'POST',
@@ -47,11 +48,13 @@ class Contact extends Component {
         .then((text) => {
             switch(text) {
                 case 1:
+                    sendData({action: 'CLICK', label: 'AJAX', value: 'SUCCESS:SUBMISSION'});
                     this.setState({sent : true, busy: false});
                     break;
                 default:
                     break;
             }
+            
         })
         .catch((error) => {
             this.setState({sent : false, busy: false});
@@ -109,10 +112,18 @@ class Contact extends Component {
         switch(this.state.step) {
             case 1 :
                 errorMessage = this.validateName();
+                if (errorMessage === '') {
+                    sendData({action: 'CLICK', label: 'NEXT', value: this.state.clientName});
+                }
                 break;
             case 2 :
-                this.setState({typeOfProject : evt.target.getAttribute('data-id')});
+                const projectID = evt.target.getAttribute('data-id');
+                this.setState({typeOfProject : projectID});
+                sendData({action: 'CLICK', label: 'NEXT', value: projectID});
                 break;
+            case 3 :
+                if (!this.state.sent)
+                    return; 
             default:
                 break;
         }
@@ -159,7 +170,7 @@ class Contact extends Component {
                             <div className={`c-contact__success ${sent ? 'c-contact--reveal' : ''}`}>
                                 <strong>Sent!</strong> I will usually respond in 24 hours.
                             </div>
-                            <form className={`c-contact__form ${sent ? '' : 'c-contact--reveal'}`}>
+                            <form className={`c-contact__form ${sent ? '' : 'c-contact--reveal'}`} onSubmit={this.submitHandler}>
                                 <div className="c-contact__formalities">Introductions</div>
                                 <div className={`c-contact__step1 ${step === 1 ? 'c-contact--reveal' : '' }`}>
                                     <label className="c-contact__label" htmlFor="clientName">
@@ -195,7 +206,7 @@ class Contact extends Component {
                                     <div className={`c-contact__step4 ${busy ? 'c-contact--reveal' : '' }`}>
                                         <Loader />
                                     </div>
-                                    <button onClick={this.submitHandler} className="c-contact__submit">{renderSubmitLabel}</button>
+                                    <button onClick={this.submitHandler} className="c-contact__submit" type="button">{renderSubmitLabel}</button>
                                 </div>
                             </form>
                         </div>

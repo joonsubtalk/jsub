@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { sendData } from '../../helpers/utils';
 
 class About extends Component {
 
@@ -15,6 +16,10 @@ class About extends Component {
 
 	clickHandler = () => {
 		this.setState({reveal : !this.state.reveal})
+	}
+
+	clickResume = () => {
+		sendData({action: 'CLICK', label: 'VIEW', value: 'View Resume'});
 	}
 
 	render() {
@@ -35,7 +40,8 @@ class About extends Component {
 				</div>
 				<div className="c-about__container">
 					<div className="c-about__header">About Me</div>
-					<a href={`${process.env.PUBLIC_URL}/download/2018_Q2_CHUNG_RESUME.pdf`} target="_blank" className="c-about__resume">View Resume</a>
+					<a onClick={this.clickResume}
+						href={`${process.env.PUBLIC_URL}/download/2018_Q2_CHUNG_RESUME.pdf`} target="_blank" className="c-about__resume">View Resume</a>
 					<div className="c-about__content">
 						<div className="c-about__card">
 							<div className="c-about__text">

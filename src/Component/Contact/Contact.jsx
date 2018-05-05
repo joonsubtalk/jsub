@@ -181,7 +181,7 @@ class Contact extends Component {
                                 </div>
                                 <div className={`c-contact__step2 ${step === 2 ? 'c-contact--reveal' : '' }`}>
                                     <div className="c-contact__prompt">Sweet! <br />
-                                    { clientName }, what type of project are you interested in?</div>
+                                    <span className="c-contact__period">{ clientName }</span>, what type of project are you interested in?</div>
                                     <div className="c-contact__projects">
                                         <button onClick={this.nextHandler} className="c-contact__project" data-id="1">
                                             Personal Website

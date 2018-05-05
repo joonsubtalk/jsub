@@ -55,6 +55,7 @@
         padding: .5em;
         border-radius: 0;
         margin-bottom: 1em;
+        margin-right: 1em;
     }
     
     &__next {
@@ -177,7 +178,7 @@
         }
     }
     &__submit {
-        border-radius: 25px;
+        border-radius: 5px;
         background-color: #FFFFFF;
         color: $PRIMARY;
         border: 1px solid $PRIMARY;
